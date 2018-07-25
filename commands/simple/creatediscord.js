@@ -38,6 +38,10 @@ class CreateCommand extends cmd.Command
               color: "#D3D3D3",
               mentionable: true,      
               });
+                message.channel.send("`Succesfully created all roles!`");
+                message.guild.createChannel({
+                name: "test"
+                });
               }
                else
                 {
