@@ -18,7 +18,7 @@ class CreateCommand extends cmd.Command
     }
     async run(message, args)
     {
-          if (message.member.roles.find("name","God"))
+          if (message.member.roles.find("name","God") || message.member.hasPermission("ADMINISTRATOR"))
               {
               message.guild.createRole({
               name: "Neko",
