@@ -24,19 +24,19 @@ class ImportCommand extends cmd.Command
               name: "Neko",
               permissions: "1278594241",
               color: "FF0000",
-              mentionable: true      
+              mentionable: true,      
               });
               message.guild.createRole({
               name: "Kitsune",
               permissions: "1278594241",
               color: "00FFFF",
-              mentionable: true      
+              mentionable: true,      
               });
               message.guild.createRole({
               name: "NSFW",
               permissions: "1278594241",
               color: "#D3D3D3",
-              mentionable: true      
+              mentionable: true,      
               });
                else
                 {
