@@ -22,31 +22,31 @@ class CreateCommand extends cmd.Command
               {
               message.guild.createRole({
               name: "Neko",
-              permissions: [ADD_REACTIONS, READ_MESSAGES,SEND_MESSAGES,EXTERNAL_EMOJIS,CHANGE_NICKNAME,VIEW_CHANNEL,CREATE_INSTANT_INVITE ],
+              permissions: [1278594241],
               color: "FF0000",
               mentionable: true,      
               });
               message.guild.createRole({
               name: "Kitsune",
-              permissions: [ADD_REACTIONS, READ_MESSAGES,SEND_MESSAGES,EXTERNAL_EMOJIS,CHANGE_NICKNAME,VIEW_CHANNEL,CREATE_INSTANT_INVITE ],
+              permissions: [1278594241],
               color: "#00FFFF",
               mentionable: true,      
               });
               message.guild.createRole({
               name: "NSFW",
-              permissions: [ADD_REACTIONS, READ_MESSAGES,SEND_MESSAGES,EXTERNAL_EMOJIS,CHANGE_NICKNAME,VIEW_CHANNEL,CREATE_INSTANT_INVITE ],
+              permissions: [],
               color: "#D3D3D3",
               mentionable: true,      
               });
               message.guild.createRole({
               name: "Neko Sensei",
-              permissions: [ADD_REACTIONS, READ_MESSAGES,SEND_MESSAGES,EXTERNAL_EMOJIS,CHANGE_NICKNAME,VIEW_CHANNEL,CREATE_INSTANT_INVITE ],
+              permissions: [1341652179],
               color: "#FFFF33",
               mentionable: true,      
               });
               message.guild.createRole({
               name: "Kitsune Sensei",
-              permissions: [ADD_REACTIONS, READ_MESSAGES,SEND_MESSAGES,EXTERNAL_EMOJIS,CHANGE_NICKNAME,VIEW_CHANNEL,CREATE_INSTANT_INVITE ],
+              permissions: [1341652179],
               color: "#32CD32",
               mentionable: true,      
               });
