@@ -20,14 +20,24 @@ class ImportCommand extends cmd.Command
     {
           if (message.member.roles.find("name","God"))
               {
-              message.guild.addRole({
+              message.guild.createRole({
               name: "Neko",
               permissions: "1278594241",
               color: "FF0000",
-              mentionable: true,
-              
+              mentionable: true      
               });
-              }
+              message.guild.createRole({
+              name: "Kitsune",
+              permissions: "1278594241",
+              color: "00FFFF",
+              mentionable: true      
+              });
+              message.guild.createRole({
+              name: "NSFW",
+              permissions: "1278594241",
+              color: "#D3D3D3",
+              mentionable: true      
+              });
                else
                 {
                     message.channel.send("`You dont have enough Permissions to execute this command!`")
