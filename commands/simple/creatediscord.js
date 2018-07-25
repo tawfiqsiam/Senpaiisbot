@@ -24,29 +24,34 @@ class CreateCommand extends cmd.Command
               name: "Neko",
               permissions: [1278594241],
               color: "FF0000",
+              position: "4",
               mentionable: true,      
               });
               message.guild.createRole({
               name: "Kitsune",
               permissions: [1278594241],
               color: "#00FFFF",
+              position: "5",
               mentionable: true,      
               });
               message.guild.createRole({
               name: "NSFW",
               permissions: [],
+              position: "6",
               color: "#D3D3D3",
               mentionable: true,      
               });
               message.guild.createRole({
               name: "Neko Sensei",
               permissions: [1341652179],
+              position: "2",
               color: "#FFFF33",
               mentionable: true,      
               });
               message.guild.createRole({
               name: "Kitsune Sensei",
               permissions: [1341652179],
+              position: "3",
               color: "#32CD32",
               mentionable: true,      
               });
