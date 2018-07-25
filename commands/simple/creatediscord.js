@@ -4,7 +4,7 @@ const discord = require("discord.js");
   //Create Channel: Log in Group Administrator
   //Create Neko, Kitsune and NSFW group
   //https://youtu.be/S5DVdjLQA44 look what to write in logs c;
-class ImportCommand extends cmd.Command
+class CreateCommand extends cmd.Command
 {
     constructor(client)
     {
@@ -38,6 +38,7 @@ class ImportCommand extends cmd.Command
               color: "#D3D3D3",
               mentionable: true,      
               });
+              }
                else
                 {
                     message.channel.send("`You dont have enough Permissions to execute this command!`")
@@ -46,4 +47,4 @@ class ImportCommand extends cmd.Command
     }
 }
 
-module.exports = ImportCommand;
+module.exports = CreateCommand;
