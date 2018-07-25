@@ -22,19 +22,19 @@ class CreateCommand extends cmd.Command
               {
               message.guild.createRole({
               name: "Neko",
-              permissions: "1278594241",
+              permissions: [],
               color: "FF0000",
               mentionable: true,      
               });
               message.guild.createRole({
               name: "Kitsune",
-              permissions: "1278594241",
+              permissions: [],
               color: "00FFFF",
               mentionable: true,      
               });
               message.guild.createRole({
               name: "NSFW",
-              permissions: "1278594241",
+              permissions: [],
               color: "#D3D3D3",
               mentionable: true,      
               });
