@@ -11,17 +11,16 @@ class ImportCommand extends cmd.Command
         super(client,{
 
           name: "creatediscord",
-          group: "team",
+          group: "simple",
           memberName: "creatediscord",
           description: "Creates the roles and channels the Bot needs!"
        });
     }
     async run(message, args)
     {
-    var guild = message.guild;
           if (message.member.roles.find("name","God"))
               {
-              guild.addRole({
+              message.guild.addRole({
               name: "Neko",
               permissions: "1278594241",
               color: "FF0000",
