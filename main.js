@@ -1,6 +1,5 @@
 const cmd = require("discord.js-commando");
 const bot = new cmd.Client();
-const Botkey = "NDY5NDcwMzE4NTI4OTU0MzY5.DjJGSA.jnp1DsrhY2MAE-ls_Z9kKLsJAwM";
 const discord = require("discord.js");
 
 //bot.registry.registergroup("simple", "simple"); 
@@ -55,4 +54,4 @@ bot.on("ready", function()
 
 });
 
-bot.login(Botkey);
+bot.login(process.env.BOT_TOKEN);
