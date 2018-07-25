@@ -39,9 +39,6 @@ class CreateCommand extends cmd.Command
               mentionable: true,      
               });
                 message.channel.send("`Succesfully created all roles!`");
-                message.guild.createChannel({
-                name: "test"
-                });
               }
                else
                 {
