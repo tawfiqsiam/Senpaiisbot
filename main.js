@@ -1,0 +1,58 @@
+const cmd = require("discord.js-commando");
+const bot = new cmd.Client();
+const Botkey = "NDY5NDcwMzE4NTI4OTU0MzY5.DjJGSA.jnp1DsrhY2MAE-ls_Z9kKLsJAwM";
+const discord = require("discord.js");
+
+//bot.registry.registergroup("simple", "simple"); 
+bot.registry.registerGroup("simple", "Simple")
+bot.registry.registerGroup("team", "Teams")
+bot.registry.registerDefaults();
+bot.registry.registerCommandsIn(__dirname+ "/commands");
+global.currentNekoMembers = [];
+global.currentKitsuneMembers = [];
+
+bot.on("message", function(message){
+    if(message.content == "Hello")
+    {
+        if (message.author == "<@223876496291266560>")//senpaii
+        message.channel.send("`Hello, my dear creator!`");
+        else if(message.author == "<@306505345579352064>")//jele
+        message.channel.send("`Hello, the Monarch of the Neko´s!`");
+        else if(message.author == "<@364412155937685504>")//max
+        message.channel.send("`Hi, OwO`")
+        else
+        message.reply("`Hello!`");
+    }
+    if(message.content == "Joinmessage")
+    {
+        var myinfo = new discord.RichEmbed()
+        .setColor(0x73B2D9)
+        .setTitle("Welcome to the Neko & Kitsune Discord :3")
+        .addField("Have fun with chat to each other, share pictures and having some great conversations and enjoy the stay here. :3","Please read #rules-and-informations and accept the rules in #commands with !neko or !kitsune")
+        .addBlankField()
+        .setFooter("Have fun c;")
+        .setTimestamp()
+        message.channel.send(myinfo);
+    }
+});
+
+bot.on("guildMemberAdd", function(member){
+    var myinfo = new discord.RichEmbed()
+        .setColor(0x73B2D9)
+        .setTitle("Welcome to the Neko & Kitsune Discord :3")
+        .addField("Have fun with chat to each other, share pictures and having some great conversations and enjoy the stay here. :3","Please read #rules-and-informations and accept the rules in #commands with !neko or !kitsune")
+        .addBlankField()
+        .setFooter("Have fun c;")
+        .setTimestamp()
+        message.channel.send(myinfo);
+});
+bot.on("ready", function()
+{
+    console.log("Bot is running!");
+    //message.member.roles.find("name","Neko")
+    bot.user.setStatus("Online")
+    bot.user.setActivity("Working hardly for my master!");
+
+});
+
+bot.login(Botkey);
