@@ -11,6 +11,9 @@ global.currentNekoMembers = [];
 global.currentKitsuneMembers = [];
 
 bot.on("message", function(message){
+
+
+
     if(message.content == "Hello")
     {
         if (message.author == "<@223876496291266560>")//senpaii
@@ -33,26 +36,47 @@ bot.on("message", function(message){
         .setTimestamp()
         message.channel.send(myinfo);
     }
+    //begin chatfilter
+    let vorbiddencontent = [
+        "Nigger",
+        "nigger",
+        "Fuck",
+        "fuck",
+        "NIGGER",
+        "FUCK",
+    ];
+    if(message.content == vorbiddencontent)
+    {
+        message.delete();
+        message.channel.send("`This Word is censored!`");
+    }
+    
+    if (message.content < 3)
+    {
+        message.delete();
+        message.channel.send("`The message you sent was too short and got deleted`");
+    }
+
 });
 //Begin Logs
-bot.on("roleCreate", function(role)
-{
-  let guild = role.guild;
-    guild.defaultChannel.sendMessage("The Role "+ role + " got created")
-});
-bot.on("roleDelete", function(role)
-{
-  let guild = role.guild;
-  guild.defaultChannel.sendMessage("The Role"+ role + " got deleted")
-    
-});
-bot.on("roleupdate", function(oRole, nRole)
-{
-    let guild = role.guild;
-    guild.defaultChannel.sendMessage("The Role" + oRole + " has now "+ nRole)
-});
+//bot.on("roleCreate", function(role)
+//{
+//  let guild = role.guild;
+//    guild.defaultChannel.sendMessage("The Role "+ role + " got created")
+//});
+//bot.on("roleDelete", function(role)
+//{
+//  let guild = role.guild;
+ // guild.defaultChannel.sendMessage("The Role"+ role + " got deleted")
+  //  
+//});
+//bot.on("roleupdate", function(oRole, nRole)
+//{
+  //  let guild = role.guild;
+//    guild.defaultChannel.sendMessage("The Role" + oRole + " has now "+ nRole)
+//});
 
-//End logs c;
+//End logs c;       not working btw. lol
 bot.on("guildMemberAdd", function(member){
     var myinfo = new discord.RichEmbed()
         .setColor(0x73B2D9)
