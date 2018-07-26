@@ -45,13 +45,18 @@ bot.on("message", function(message){
         "NIGGER" ||
         "FUCK" 
     ];
-    if(message.content == vorbiddencontent)
+    if(message.content == "Nigger"||
+    message.content == "nigger"||
+    message.content == "Fuck"||
+    message.content =="fuck"||
+    message.content == "NIGGER"||
+    message.content == "FUCK")
     {
         message.delete();
         message.channel.send("`This Word is censored!`");
     }
     
-    if (message.content < 3)
+    if (message.content <= 3)
     {
         message.delete();
         message.channel.send("`The message you sent was too short and got deleted`");
