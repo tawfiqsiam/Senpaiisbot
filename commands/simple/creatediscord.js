@@ -20,8 +20,10 @@ class CreateCommand extends cmd.Command
     {
           if (message.member.roles.find("name","God") || message.member.hasPermission("ADMINISTRATOR"))
               {
-                  if(message.guild.roles.find("name","Neko"))
-                  message.channel.send("`Group Neko already exists skipping..`")
+                  if(message.member.guild.find("name","Neko"))
+                  {
+                  message.channel.send("`Group Neko already exists skipping..`");
+                  }
                   else{
                     message.guild.createRole({
                         name: "Neko",
@@ -31,8 +33,10 @@ class CreateCommand extends cmd.Command
                         mentionable: true,      
                         });
                   }
-                  if(message.guild.roles.find(("name","Kitsune"))
-                  message.channel.send("`Group Kitsune already exists skipping..`")
+                  if(message.member.guild.find("name","Kitsune"))
+                  {
+                  message.channel.send("`Group Kitsune already exists skipping..`");
+                  }
                   else
                   {
                     message.guild.createRole({
@@ -42,8 +46,10 @@ class CreateCommand extends cmd.Command
                         position: "5",
                         mentionable: true,      
               });}
-              if(message.guild.roles.find(("name","NSFW"))
-              message.channel.send("`Group NSFW already exists`")
+              if(message.member.guild.find("name","NSFW"))
+              {
+              message.channel.send("`Group NSFW already exists skipping..`");
+              }
               else{
               message.guild.createRole({
               name: "NSFW",
@@ -52,8 +58,10 @@ class CreateCommand extends cmd.Command
               color: "#D3D3D3",
               mentionable: true,      
               });}
-              if(message.guild.roles.find(("name","Neko Sensei"))
-              message.channel.send("`Group Neko Sensei already exists`")
+              if(message.member.guild.find("name","Neko Sensei"))
+              {
+              message.channel.send("`Group Neko Sensei already exists skipping..`");
+              }
               else{
               message.guild.createRole({
               name: "Neko Sensei",
@@ -62,8 +70,10 @@ class CreateCommand extends cmd.Command
               color: "#FFFF33",
               mentionable: true,      
               });}
-              if(message.guild.roles.find(("name","Kitsune Sensei"))
-              message.channel.send("`Group Kitsune Sensei already exists`")
+              if(message.member.guild.find("name","Kitsune Sensei"))
+              {
+              message.channel.send("`Group Kitsune Sensei already exists skipping..`");
+              }
               else{
               message.guild.createRole({
               name: "Kitsune Sensei",
