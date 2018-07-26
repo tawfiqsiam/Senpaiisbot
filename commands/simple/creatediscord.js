@@ -55,7 +55,7 @@ class CreateCommand extends cmd.Command
               color: "#32CD32",
               mentionable: true,      
               });
-              message.guild.createChannel("Rules", "text);
+              message.guild.createChannel("Rules", "text");
               message.guild.createChannel("Admin","category",[{
                 id: guild.id,
                 deny: ['SEND_MESSAGES, READ_MESSAGES, VIEW_CHANNEL'}]);
