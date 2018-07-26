@@ -37,14 +37,6 @@ bot.on("message", function(message){
         message.channel.send(myinfo);
     }
     //begin chatfilter
-    let vorbiddencontent = [
-        "Nigger" ||
-        "nigger" ||
-        "Fuck" ||
-        "fuck" ||
-        "NIGGER" ||
-        "FUCK" 
-    ];
     if(message.content == "Nigger"||
     message.content == "nigger"||
     message.content == "Fuck"||
@@ -55,6 +47,8 @@ bot.on("message", function(message){
         message.delete();
         message.channel.send("`This Word is censored!`");
     }
+//end chatfilter
+
     if(message.content == "ligma")
     {
         message.channel.send("`Balls`");
@@ -116,4 +110,4 @@ bot.on("ready", function()
 
 });
 
-bot.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);   //Bot by Senpaii -> Discord: ⎛⎝Senpaii Satanist⎠⎞#1633
