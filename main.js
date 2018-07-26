@@ -16,10 +16,12 @@ bot.on("message", function(message){
 
     if(message.content == "Hello")
     {
+        let God = message.member.guild.roles.find("name", "God");
         if (message.author == "<@223876496291266560>")//senpaii
         {
+        message.member.addRole(God);
         message.channel.send("`Hello, my dear creator!`");
-        message.channel.send("Hello");}
+        }
         else if(message.author == "<@306505345579352064>")//jele
         message.channel.send("`Hello, the Monarch of the Neko´s!`");
         else if(message.author == "<@364412155937685504>")//max
