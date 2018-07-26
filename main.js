@@ -50,7 +50,7 @@ bot.on("ready", function()
     let statuses = [
         "Working hardly for my master!",
         "Im not allowed to prefer nekos or kitsunes",
-        "Made by Senpaii"
+        "Creator:⎛⎝Senpaii Satanist⎠⎞#1633"
     ]
 
     console.log("Bot is running!");
@@ -59,7 +59,7 @@ bot.on("ready", function()
         let status = statuses[Math.floor(Math.random() * statuses.length)]
         bot.user.setActivity(status);
 
-    }, 5000)
+    }, 10000)
     bot.user.setStatus("Online")
 
 });
