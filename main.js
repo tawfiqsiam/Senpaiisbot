@@ -17,7 +17,9 @@ bot.on("message", function(message){
     if(message.content == "Hello")
     {
         if (message.author == "<@223876496291266560>")//senpaii
+        {
         message.channel.send("`Hello, my dear creator!`");
+        message.channel.send("Hello");}
         else if(message.author == "<@306505345579352064>")//jele
         message.channel.send("`Hello, the Monarch of the Neko´s!`");
         else if(message.author == "<@364412155937685504>")//max
@@ -52,13 +54,6 @@ bot.on("message", function(message){
     if(message.content == "ligma")
     {
         message.channel.send("`Balls`");
-    }
-
-
-    if (message.content <= 3)
-    {
-        message.delete();
-        message.channel.send("`The message you sent was too short and got deleted`");
     }
 
 });
