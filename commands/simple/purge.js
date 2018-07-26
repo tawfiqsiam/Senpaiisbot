@@ -18,7 +18,8 @@ class purgecommand extends cmd.Command
     return;
      message.delete();
      const fetched = await message.channel.fetchMessages();
-     message.channel.bulkDelete(fetched)
+     message.channel.bulkDelete(fetched);
+     message.channel.send("`Deleted all messages!`");
     }
 
 }
