@@ -83,7 +83,8 @@ class CreateCommand extends cmd.Command
               mentionable: true,      
               });}
               message.guild.createChannel("Rules", "text");
-              message.guild.createChannel("Admin","category");
+              message.guild.createChannel("Commands", "text");
+              message.guild.createChannel("Bot","category");
               message.guild.createChannel("Logs", "text");
                 message.channel.send("`Succesfully created all roles!`");
                 message.channel.send("`Please edit the Permissions of the Roles to your likeable!`");
