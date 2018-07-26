@@ -87,11 +87,12 @@ class CreateCommand extends cmd.Command
               message.guild.createChannel("Bot","category");
               message.guild.createChannel("Logs", "text");
                 message.channel.send("`Succesfully created all roles!`");
-                message.channel.send("`Please edit the Permissions of the Roles to your likeable!`");
+                message.channel.send("`You can edit the Permissions of the Roles to your likeable!`");
               }
                else
                 {
                     message.channel.send("`You dont have enough Permissions to execute this command!`")
+                    
                  }
 
     }

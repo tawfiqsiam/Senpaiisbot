@@ -47,10 +47,21 @@ bot.on("guildMemberAdd", function(member){
 });
 bot.on("ready", function()
 {
+    let statuses = [
+        "Working hardly for my master!",
+        "Im not allowed to prefer nekos or kitsunes",
+
+        "Creator:⎛⎝Senpaii Satanist⎠⎞#1633"
+    ]
+
     console.log("Bot is running!");
     //message.member.roles.find("name","Neko")
+    setInterval(function() {
+        let status = statuses[Math.floor(Math.random() * statuses.length)]
+        bot.user.setActivity(status);
+
+    }, 10000)
     bot.user.setStatus("Online")
-    bot.user.setActivity("Working hardly for my master!");
 
 });
 
