@@ -55,7 +55,12 @@ bot.on("message", function(message){
         message.delete();
         message.channel.send("`This Word is censored!`");
     }
-    
+    if(message.content == "ligma")
+    {
+        message.channel.send("`Balls`");
+    }
+
+
     if (message.content <= 3)
     {
         message.delete();
