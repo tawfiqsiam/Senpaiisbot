@@ -57,7 +57,7 @@ class CreateCommand extends cmd.Command
               });
               message.guild.createChannel("Rules", "text");
               message.guild.createChannel("Admin","category",[{
-                deny: ['SEND_MESSAGES, READ_MESSAGES, VIEW_CHANNEL' ]}]);
+                deny: [1074236608]}]);
               message.guild.createChannel("Logs", "text");
                 message.channel.send("`Succesfully created all roles!`");
                 message.channel.send("`Please edit the Permissions of the Roles to your likeable!`");
