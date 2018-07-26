@@ -20,41 +20,58 @@ class CreateCommand extends cmd.Command
     {
           if (message.member.roles.find("name","God") || message.member.hasPermission("ADMINISTRATOR"))
               {
-              message.guild.createRole({
-              name: "Neko",
-              permissions: [1278594241],
-              color: "FF0000",
-              position: "4",
-              mentionable: true,      
-              });
-              message.guild.createRole({
-              name: "Kitsune",
-              permissions: [1278594241],
-              color: "#00FFFF",
-              position: "5",
-              mentionable: true,      
-              });
+                  if(message.guild.roles.find("Neko"))
+                  message.channel.send("`Group Neko already exists skipping..`")
+                  else{
+                    message.guild.createRole({
+                        name: "Neko",
+                        permissions: [1278594241],
+                        color: "FF0000",
+                        position: "4",
+                        mentionable: true,      
+                        });
+                  }
+                  if(message.guild.roles.find("Kitsune"))
+                  message.channel.send("`Group Kitsune already exists skipping..`")
+                  else
+                  {
+                    message.guild.createRole({
+                        name: "Kitsune",
+                        permissions: [1278594241],
+                        color: "#00FFFF",
+                        position: "5",
+                        mentionable: true,      
+              });}
+              if(message.guild.roles.find("NSFW"))
+              message.channel.send("`Group NSFW already exists`")
+              else{
               message.guild.createRole({
               name: "NSFW",
               permissions: [],
               position: "6",
               color: "#D3D3D3",
               mentionable: true,      
-              });
+              });}
+              if(message.guild.roles.find("Neko Sensei"))
+              message.channel.send("`Group Neko Sensei already exists`")
+              else{
               message.guild.createRole({
               name: "Neko Sensei",
               permissions: [1341652179],
               position: "2",
               color: "#FFFF33",
               mentionable: true,      
-              });
+              });}
+              if(message.guild.roles.find("Kitsune Sensei"))
+              message.channel.send("`Group Kitsune Sensei already exists`")
+              else{
               message.guild.createRole({
               name: "Kitsune Sensei",
               permissions: [1341652179],
               position: "3",
               color: "#32CD32",
               mentionable: true,      
-              });
+              });}
               message.guild.createChannel("Rules", "text");
               message.guild.createChannel("Admin","category",[{
                 deny: [1074236608]}]);
