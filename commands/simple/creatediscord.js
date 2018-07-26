@@ -20,7 +20,7 @@ class CreateCommand extends cmd.Command
     {
           if (message.member.roles.find("name","God") || message.member.hasPermission("ADMINISTRATOR"))
               {
-                  if(message.guild.role.find("name","Neko"))
+                  if(message.guild.roles.find("name","Neko"))
                   {
                   message.channel.send("`Group Neko already exists skipping..`");
                   }
