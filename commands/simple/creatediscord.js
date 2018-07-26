@@ -33,7 +33,7 @@ class CreateCommand extends cmd.Command
                         mentionable: true,      
                         });
                   }
-                  if(message.guild.role.find("name","Kitsune"))
+                  if(message.guild.roles.find("name","Kitsune"))
                   {
                   message.channel.send("`Group Kitsune already exists skipping..`");
                   }
@@ -46,7 +46,7 @@ class CreateCommand extends cmd.Command
                         position: "5",
                         mentionable: true,      
               });}
-              if(message.guild.role.find("name","NSFW"))
+              if(message.guild.roles.find("name","NSFW"))
               {
               message.channel.send("`Group NSFW already exists skipping..`");
               }
@@ -58,7 +58,7 @@ class CreateCommand extends cmd.Command
               color: "#D3D3D3",
               mentionable: true,      
               });}
-              if(message.guild.role.find("name","Neko Sensei"))
+              if(message.guild.roles.find("name","Neko Sensei"))
               {
               message.channel.send("`Group Neko Sensei already exists skipping..`");
               }
@@ -70,7 +70,7 @@ class CreateCommand extends cmd.Command
               color: "#FFFF33",
               mentionable: true,      
               });}
-              if(message.guild.role.find("name","Kitsune Sensei"))
+              if(message.guild.roles.find("name","Kitsune Sensei"))
               {
               message.channel.send("`Group Kitsune Sensei already exists skipping..`");
               }
