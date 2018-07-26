@@ -38,12 +38,12 @@ bot.on("message", function(message){
     }
     //begin chatfilter
     let vorbiddencontent = [
-        "Nigger",
-        "nigger",
-        "Fuck",
-        "fuck",
-        "NIGGER",
-        "FUCK",
+        "Nigger" ||
+        "nigger" ||
+        "Fuck" ||
+        "fuck" ||
+        "NIGGER" ||
+        "FUCK" 
     ];
     if(message.content == vorbiddencontent)
     {
