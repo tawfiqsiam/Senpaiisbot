@@ -34,7 +34,25 @@ bot.on("message", function(message){
         message.channel.send(myinfo);
     }
 });
+//Begin Logs
+bot.on("roleCreate", function(role)
+{
+  let guild = role.guild;
+    guild.defaultChannel.sendMessage("The Role "+ role + " got created")
+});
+bot.on("roleDelete", function(role)
+{
+  let guild = role.guild;
+  guild.defaultChannel.sendMessage("The Role"+ role + " got deleted")
+    
+});
+bot.on("roleupdate", function(oRole, nRole)
+{
+    let guild = role.guild;
+    guild.defaultChannel.sendMessage("The Role" + oRole + " has now "+ nRole)
+});
 
+//End logs c;
 bot.on("guildMemberAdd", function(member){
     var myinfo = new discord.RichEmbed()
         .setColor(0x73B2D9)
