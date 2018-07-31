@@ -107,8 +107,4 @@ bot.on("ready", function()
     bot.user.setStatus("Online")
 
 });
-bot.on("disconnect", function()
-{
-    System.out.println("shutting down bot!");
-});
 bot.login(process.env.BOT_TOKEN);   //Bot by Senpaii -> Discord: ⎛⎝Senpaii Satanist⎠⎞#1633
