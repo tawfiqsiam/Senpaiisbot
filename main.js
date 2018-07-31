@@ -96,7 +96,7 @@ bot.on("ready", function()
         "Im not allowed to prefer nekos or kitsunes",
         "Creator:⎛⎝Senpaii Satanist⎠⎞#1633"
     ]
-    System.out.println("starting up bot!");
+    console.out("started bot!");
 
     //message.member.roles.find("name","Neko")
     setInterval(function() {
