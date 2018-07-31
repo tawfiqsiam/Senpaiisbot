@@ -14,12 +14,14 @@ global.currentKitsuneMembers = [];
 
 
 bot.on("message", function(message){
-
+//chatfilter
     let blacklist = [
         "nigger",
-        "test",
         "fuck",
-        "shit"
+        "asshole",
+        "bitch",
+        "bastard",
+        "cunt"
     ];
     var found = false;
     
@@ -33,7 +35,7 @@ bot.on("message", function(message){
         message.author.send("`Sorry you cant say that!`")
     }
 
-
+//chatfilter end
     if(message.content == "Hello")
     { 
         if (message.author == "<@223876496291266560>")//senpaii
@@ -42,12 +44,10 @@ bot.on("message", function(message){
         }
         else if(message.author == "<@306505345579352064>")//jele
         message.channel.send("`Hello, the Monarch of the Neko´s!`");
-        else if(message.author == "<@364412155937685504>")//max
-        message.channel.send("`Hi, OwO`")
         else
         message.reply("`Hello!`");
     }
-    if(message.content == "Joinmessage")
+  /*  if(message.content == "Joinmessage")
     {
         var myinfo = new discord.RichEmbed()
         .setColor(0x73B2D9)
@@ -57,12 +57,7 @@ bot.on("message", function(message){
         .setFooter("Have fun c;")
         .setTimestamp()
         message.channel.send(myinfo);
-    }
-
-    if(message.content == "ligma")
-    {
-        message.channel.send("`Balls`");
-    }
+    }*/
 
 });
 //Begin Logs
