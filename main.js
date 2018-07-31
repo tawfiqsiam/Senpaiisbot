@@ -32,11 +32,13 @@ bot.on("message", function(message){
     if(found)
     {
         message.delete();
-        message.author.send("`You said an blacklisted word and it got deleted!`")
+        message.author.send("`You arent allowed to use that word!`")
         console.log("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.name + " uid: " + message.author + "!");
     }
 
+
 //chatfilter end
+
     if(message.content == "Hello")
     { 
         if (message.author == "<@223876496291266560>")//senpaii
@@ -48,17 +50,6 @@ bot.on("message", function(message){
         else
         message.reply("`Hello!`");
     }
-  /*  if(message.content == "Joinmessage")
-    {
-        var myinfo = new discord.RichEmbed()
-        .setColor(0x73B2D9)
-        .setTitle("Welcome to the Neko & Kitsune Discord :3")
-        .addField("Have fun with chat to each other, share pictures and having some great conversations and enjoy the stay here. :3","Please read #rules-and-informations and accept the rules in #commands with !neko or !kitsune")
-        .addBlankField()
-        .setFooter("Have fun c;")
-        .setTimestamp()
-        message.channel.send(myinfo);
-    }*/
 
 });
 bot.on("guildMemberAdd", function(member){
