@@ -32,7 +32,7 @@ bot.on("message", function(message){
     if(found)
     {
         message.delete();
-        message.author.send("`Sorry you cant say " + message.content + " on this server!`")
+        message.author.send("`You said an blacklisted word and it got deleted!`")
         console.log("Deleted "+ message.content + "from" + message.channel + "send by" + message.author + "!");
     }
 
@@ -61,25 +61,6 @@ bot.on("message", function(message){
     }*/
 
 });
-//Begin Logs
-//bot.on("roleCreate", function(role)
-//{
-//  let guild = role.guild;
-//    guild.defaultChannel.sendMessage("The Role "+ role + " got created")
-//});
-//bot.on("roleDelete", function(role)
-//{
-//  let guild = role.guild;
- // guild.defaultChannel.sendMessage("The Role"+ role + " got deleted")
-  //  
-//});
-//bot.on("roleupdate", function(oRole, nRole)
-//{
-  //  let guild = role.guild;
-//    guild.defaultChannel.sendMessage("The Role" + oRole + " has now "+ nRole)
-//});
-
-//End logs c;       not working btw. lol
 bot.on("guildMemberAdd", function(member){
     var myinfo = new discord.RichEmbed()
         .setColor(0x73B2D9)
