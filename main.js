@@ -10,16 +10,34 @@ bot.registry.registerCommandsIn(__dirname+ "/commands");
 global.currentNekoMembers = [];
 global.currentKitsuneMembers = [];
 
+
+
+
 bot.on("message", function(message){
 
+    let blacklist = [
+        "nigger",
+        "test",
+        "fuck",
+        "shit"
+    ];
+    var found = false;
+    
+    for(var i in blacklist){
+        if (message.content.toLowerCase().includes(blacklist[i].toLowerCase()))
+        found = true;
+    }
+    if(found)
+    {
+        message.delete();
+        message.author.send("`Sorry you cant say that!`")
+    }
 
 
     if(message.content == "Hello")
-    {
-        let God = message.member.guild.roles.find("name", "God");
+    { 
         if (message.author == "<@223876496291266560>")//senpaii
         {
-        message.member.addRole(God);
         message.channel.send("`Hello, my dear creator!`");
         }
         else if(message.author == "<@306505345579352064>")//jele
@@ -40,18 +58,6 @@ bot.on("message", function(message){
         .setTimestamp()
         message.channel.send(myinfo);
     }
-    //begin chatfilter
-    if(message.content == "Nigger"||
-    message.content == "nigger"||
-    message.content == "Fuck"||
-    message.content =="fuck"||
-    message.content == "NIGGER"||
-    message.content == "FUCK")
-    {
-        message.delete();
-        message.channel.send("`This Word is censored!`");
-    }
-//end chatfilter
 
     if(message.content == "ligma")
     {
