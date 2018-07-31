@@ -32,7 +32,7 @@ bot.on("message", function(message){
     if(found)
     {
         message.delete();
-        message.author.send("`Sorry you cant say that!`")
+        message.author.send("`Sorry you cant say " + message.content + " on this server!`")
     }
 
 //chatfilter end
