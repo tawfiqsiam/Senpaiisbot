@@ -33,7 +33,7 @@ bot.on("message", function(message){
     {
         message.delete();
         message.author.send("`You said an blacklisted word and it got deleted!`")
-        console.log("Deleted "+ message.content + "from" + message.channel + "send by" + message.author + "!");
+        console.log("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.name + " uid: " + message.author + "!");
     }
 
 //chatfilter end
