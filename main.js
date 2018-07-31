@@ -96,8 +96,8 @@ bot.on("ready", function()
         "Im not allowed to prefer nekos or kitsunes",
         "Creator:⎛⎝Senpaii Satanist⎠⎞#1633"
     ]
+    System.out.println("starting up bot!");
 
-    console.log("Bot is running!");
     //message.member.roles.find("name","Neko")
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)]
@@ -107,5 +107,8 @@ bot.on("ready", function()
     bot.user.setStatus("Online")
 
 });
-
+bot.on("discornect", function()
+{
+    System.out.println("shutting down bot!");
+});
 bot.login(process.env.BOT_TOKEN);   //Bot by Senpaii -> Discord: ⎛⎝Senpaii Satanist⎠⎞#1633
