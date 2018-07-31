@@ -33,6 +33,7 @@ bot.on("message", function(message){
     {
         message.delete();
         message.author.send("`Sorry you cant say " + message.content + " on this server!`")
+        console.log("Deleted "+ message.content + "from" + message.channel + "send by" + message.author + "!");
     }
 
 //chatfilter end
@@ -88,6 +89,7 @@ bot.on("guildMemberAdd", function(member){
         .setFooter("Have fun c;")
         .setTimestamp()
         message.channel.send(myinfo);
+        console.log(member + "joined the server");
 });
 bot.on("ready", function()
 {
