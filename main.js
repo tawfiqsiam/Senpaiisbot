@@ -107,7 +107,7 @@ bot.on("ready", function()
     bot.user.setStatus("Online")
 
 });
-bot.on("discornect", function()
+bot.on("disconnect", function()
 {
     System.out.println("shutting down bot!");
 });
