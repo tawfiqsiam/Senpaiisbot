@@ -39,7 +39,7 @@ bot.on("message", function(message){
 
 //chatfilter end
 
-    if(message.content == "Hello")
+    if(message.content.toLowerCase() == "Hello")
     { 
         if (message.author == "<@223876496291266560>")//senpaii
         {
@@ -60,8 +60,8 @@ bot.on("guildMemberAdd", function(member){
         .addBlankField()
         .setFooter("Have fun c;")
         .setTimestamp()
-        message.channel.send(myinfo);
-        console.log(member + "joined the server");
+        member.channel.send(myinfo);
+        console.log(member.username  + "joined the server");
 });
 bot.on("ready", function()
 {
