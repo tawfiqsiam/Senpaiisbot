@@ -50,6 +50,9 @@ bot.on("message", function(message){
         else
         message.reply("`Hello!`");
     }
+    else if(message.content == botclientid){
+        message.channel.send(bot.user);
+    }
 
 });
 bot.on("guildMemberAdd", function(member){
