@@ -51,7 +51,7 @@ bot.on("message", function(message){
         message.reply("`Hello!`");
     }
     else if(message.content == "botclientid"){
-        message.channel.send("BotID:" + bot);
+        message.channel.send("BotID:" + bot.user.id);
     }
 
 });
