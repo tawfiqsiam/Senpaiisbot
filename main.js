@@ -39,7 +39,7 @@ bot.on("message", function(message){
 
 //chatfilter end
 
-    if(message.content.toLowerCase() == "Hello")
+    if(message.content == "Hello")
     { 
         if (message.author == "<@223876496291266560>")//senpaii
         {
@@ -50,7 +50,7 @@ bot.on("message", function(message){
         else
         message.reply("`Hello!`");
     }
-    else if(message.content == botclientid){
+    else if(message.content == "botclientid"){
         message.channel.send(bot.user);
     }
 
