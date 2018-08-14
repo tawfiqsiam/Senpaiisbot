@@ -71,7 +71,8 @@ bot.on("ready", function()
     let statuses = [
         "Working hardly for my master!",
         "Im not allowed to prefer nekos or kitsunes",
-        "Creator:⎛⎝Senpaii Satanist⎠⎞#1633"
+        "Creator:⎛⎝Senpaii Satanist⎠⎞#1633",
+        "Advantage through technology"
     ]
     console.log("Bot is running!");
 
