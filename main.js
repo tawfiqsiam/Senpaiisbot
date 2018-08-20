@@ -59,7 +59,7 @@ bot.on("guildMemberAdd", function(member){
     var myinfo = new discord.RichEmbed()
         .setColor(0x73B2D9)
         .setTitle("Welcome to Senpaii´s Discord :3")
-        .addField("Have fun with chat to each other, share pictures and having some great conversations and enjoy the stay here. :3","Please read #rules-and-informations and accept the rules in #commands with !neko or !kitsune")
+        .addField("Have fun with chat to each other, share pictures and having some great conversations and enjoy the stay here. :3","Please read #rules and accept the rules in #commands with !neko or !kitsune")
         .addBlankField()
         .setFooter("Have fun c;")
         .setTimestamp()
