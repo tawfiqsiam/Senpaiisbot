@@ -63,14 +63,14 @@ bot.on("message", function(message){
     }
 
 
-    if(message.content.length < 2)
+   /* if(message.content.length < 2)
     {
         message.delete();
         message.author.send("`Your Message is too short!`")
         console.log("Deleted message from: " + message.author.username + message.author + " reason: Message to short!");
         if(logChannel)
            logChannel.send("Deleted message from: " + message.author.username + message.author + " reason: Message to short!");
-    }
+    }*/
 
     if(!links){
         if(message.content.toLowerCase().includes("https://") || message.content.toLowerCase().includes("http://"))
