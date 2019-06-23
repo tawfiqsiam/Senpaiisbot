@@ -50,7 +50,7 @@ bot.on("message", function(message){
     }
 
     for(var i in bannedwords){
-        if (message.content.toLowerCase().includes(blacklist[i].toLowerCase()))
+        if (message.content.toLowerCase().includes(bannedwords[i].toLowerCase()))
         found = true;
     }
     if(found)
