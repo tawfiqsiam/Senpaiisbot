@@ -1,8 +1,6 @@
 const cmd = require("discord.js-commando");
 const bot = new cmd.Client();
 const discord = require("discord.js");
-const fs = require("fs");
-const moment = require("moment");
 
 const serverStats = {
     guildID: '471739831173775379',
