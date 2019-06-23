@@ -29,17 +29,17 @@ class JoinNekoCommand extends cmd.Command
               }
                else
                 {
-                       if (message.member.roles.find("name","Neko"))
-                       {
-                            message.channel.send("`You are already a Neko! Nyaa~`")
-                       }
-                        else
-                	 {
+                    if (message.member.roles.find("name","Neko"))
+                    {
+                           message.channel.send("`You are already a Neko! Nyaa~`")
+                    }
+                    else
+                	{
                            message.member.addRole(Neko);
                            message.channel.send("`Welcome to the Nekos! Nyaa~`");
                            currentNekoMembers.push(message.author);
-                        }
-                     }
+                    }
+                }
         }
 
 

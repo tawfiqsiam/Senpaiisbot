@@ -1,31 +1,57 @@
 const cmd = require("discord.js-commando");
 const bot = new cmd.Client();
 const discord = require("discord.js");
+const fs = require("fs");
+const moment = require("moment");
+
+const serverStats = {
+    guildID: '471739831173775379',
+    totalUsersID: '592400519314800680',
+    memberCountID: '592400584573714432',
+    botCountID: '592400622528102474'
+};
 
 //bot.registry.registergroup("simple", "simple"); 
 bot.registry.registerGroup("simple", "Simple")
 bot.registry.registerGroup("team", "Teams")
+bot.registry.registerGroup("management", "Management");
+bot.registry.registerGroup("interactions", "Interactions");
+bot.registry.registerGroup("images", "Images");
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname+ "/commands");
+global.lastmessageuser = 0;
+global.lastmessagesend = 0;
 global.currentNekoMembers = [];
 global.currentKitsuneMembers = [];
-
-
+global.disablechat = false;
+global.links = true;
+global.bannedwords = [
+    "nigger",
+    "asshole",
+    "bitch",
+    "bastard",
+    "cunt",
+    "cheat",
+    "hack"
+];
 
 
 bot.on("message", function(message){
+    if(message.author == bot.user)
+        return;
+    let logChannel = message.guild.channels.find(`name`, "logs");
 //chatfilter
-    let blacklist = [
-        "nigger",
-        "fuck",
-        "asshole",
-        "bitch",
-        "bastard",
-        "cunt"
-    ];
     var found = false;
     
-    for(var i in blacklist){
+    if(lastmessagesend == message.content){
+        message.delete();
+        message.author.send("`Please dont Spam!`")
+        console.log("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.name + " uid: " + message.author + "!" );
+        if(logChannel)
+            logChannel.send("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.name + " uid: " + message.author + "!")
+    }
+
+    for(var i in bannedwords){
         if (message.content.toLowerCase().includes(blacklist[i].toLowerCase()))
         found = true;
     }
@@ -34,6 +60,31 @@ bot.on("message", function(message){
         message.delete();
         message.author.send("`You arent allowed to use that word!`")
         console.log("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.name + " uid: " + message.author + "!");
+        if(logChannel)
+            logChannel.send("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.name + " uid: " + message.author + "!")
+    }
+
+
+    if(message.content.length < 2)
+    {
+        message.delete();
+        message.author.send("`Your Message is too short!`")
+        console.log("Deleted message from: " + message.author.username + message.author + " reason: Message to short!");
+        if(logChannel)
+           logChannel.send("Deleted message from: " + message.author.username + message.author + " reason: Message to short!");
+    }
+
+    if(!links){
+        if(message.content.toLowerCase().includes("https://") || message.content.toLowerCase().includes("http://"))
+        {
+            message.delete();
+            message.author.send("`Links are not allowed!`");
+            console.log("Deleted message from: " + message.author.username + message.author + " reason: Link!");
+            if(logChannel)
+               logChannel.send("Deleted message from: " + message.author.username + message.author + " reason: Link!");
+
+               
+        }
     }
 
 
@@ -50,12 +101,11 @@ bot.on("message", function(message){
         else
         message.reply("`Hello!`");
     }
-    else if(message.content == "botclientid"){
-        message.channel.send("BotID:" + bot.user.id);
-    }
-
+      lastmessagesend = message.content;
 });
+
 bot.on("guildMemberAdd", function(member){
+    console.log(member.username  + " ist dem Server beigetreten! ID: " + member);
     var myinfo = new discord.RichEmbed()
         .setColor(0x73B2D9)
         .setTitle("Welcome to Senpaii´s Discord :3")
@@ -64,15 +114,42 @@ bot.on("guildMemberAdd", function(member){
         .setFooter("Have fun c;")
         .setTimestamp()
         member.channel.send(myinfo);
-        console.log(member.username  + "joined the server");
+
+    if(member.guild.id !== serverStats.guildID)
+        return;
+
+    bot.channels.get(serverStats.totalUsersID).setName(`Total Users : ${member.guild.memberCount}`);
+    bot.channels.get(serverStats.memberCountID).setName(`Member Count : ${member.guild.members.filter(m => !m.user.bot).size}`);
+    bot.channels.get(serverStats.botCountID).setName(`Bot Count : ${member.guild.members.filter(m => m.user.bot).size}`);
+
+    let logChannel = member.guild.channels.find(`name`, "logs");
+    if(logChannel) 
+        logChannel.send(member  + " has joined the Server! ID: " + member.id)
+
 });
+
+bot.on("guildMemberRemove", function(member){
+
+    if(member.guild.id !== serverStats.guildID)
+        return;
+
+        bot.channels.get(serverStats.totalUsersID).setName(`Total Users : ${member.guild.memberCount}`);
+        bot.channels.get(serverStats.memberCountID).setName(`Member Count : ${member.guild.members.filter(m=> !m.user.bot).size}`);
+        bot.channels.get(serverStats.botCountID).setName(`Bot Count : ${member.guild.members.filter(m=>m.user.bot).size}`);
+
+        let logChannel = member.guild.channels.find(`name`, "logs");
+        if(logChannel)
+           logChannel.send(member  + " has left the Server! ID: " + member.id)
+});
+
 bot.on("ready", function()
 {
     let statuses = [
         "Working hardly for my master!",
-        "Im not allowed to prefer nekos or kitsunes",
-        "Creator:⎛⎝Senpaii Satanist⎠⎞#1633",
-        "Advantage through technology"
+        "Im not allowed to prefer nekos or kitsunes :3",
+        "Creator:⎝⎝✧Senͥ𝕡aͣiͫi✧⎠⎠#1633",
+        "Advantage through technology!",
+        "redcore.win is my favorite site!"
     ]
     console.log("Bot is running!");
 
@@ -85,4 +162,4 @@ bot.on("ready", function()
     bot.user.setStatus("Online")
 
 });
-bot.login(process.env.BOT_TOKEN);   //Bot by Senpaii -> Discord: ⎛⎝Senpaii Satanist⎠⎞#1633
+bot.login(process.env.BOT_TOKEN);   //Bot by Senpaii -> Discord: ⎝⎝✧Senͥ𝕡aͣiͫi✧⎠⎠#1633

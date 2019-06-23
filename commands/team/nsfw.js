@@ -17,16 +17,14 @@ class NsFwCommand extends cmd.Command
         let nsfw = message.member.guild.roles.find("name", "NSFW");
         if (message.member.roles.find("name","NSFW"))
         {
-         message.channel.send("`You already have the NSFW rank! c;`")
+            message.channel.send("`You already have the NSFW rank! c;`")
         }
-         else
-          {
-               message.member.addRole(nsfw);
-               message.channel.send("`Thak you for agreeing c; ?`");
+        else
+        {
+            message.member.addRole(nsfw);
+            message.channel.send("`OwO, whats this?`");
         }
     }
-
-
 }
 
 module.exports = NsFwCommand;
