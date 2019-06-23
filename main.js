@@ -159,7 +159,7 @@ bot.on("ready", function()
         bot.user.setActivity(status);
 
     }, 10000)
-    bot.user.setStatus("Online")
+    bot.user.setStatus("Online");
 
 });
 bot.login(process.env.BOT_TOKEN);   //Bot by Senpaii -> Discord: ⎝⎝✧Senͥ𝕡aͣiͫi✧⎠⎠#1633
