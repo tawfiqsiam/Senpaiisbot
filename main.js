@@ -41,7 +41,7 @@ bot.on("message", function(message){
 //chatfilter
     var found = false;
     
-    if(lastmessagesend == message.content){
+    if(lastmessagesend == message.content && !message.content.includes("!")){
         message.delete();
         message.author.send("`Please dont Spam!`")
         console.log("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.name + " uid: " + message.author + "!" );
