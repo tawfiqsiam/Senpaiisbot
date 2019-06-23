@@ -120,7 +120,7 @@ bot.on("guildMemberAdd", function(member){
     bot.channels.get(serverStats.memberCountID).setName(`Member Count : ${member.guild.members.filter(m => !m.user.bot).size}`);
     bot.channels.get(serverStats.botCountID).setName(`Bot Count : ${member.guild.members.filter(m => m.user.bot).size}`);
 
-    let logChannel = member.guild.channels.find(`name`, "logs");
+    let logChannel = bot.channels.find(`name`, "logs");
     if(logChannel) 
         logChannel.send(member  + " has joined the Server! ID: " + member.id)
 
@@ -135,7 +135,7 @@ bot.on("guildMemberRemove", function(member){
         bot.channels.get(serverStats.memberCountID).setName(`Member Count : ${member.guild.members.filter(m=> !m.user.bot).size}`);
         bot.channels.get(serverStats.botCountID).setName(`Bot Count : ${member.guild.members.filter(m=>m.user.bot).size}`);
 
-        let logChannel = member.guild.channels.find(`name`, "logs");
+        let logChannel = bot.channels.find(`name`, "logs");
         if(logChannel)
            logChannel.send(member  + " has left the Server! ID: " + member.id)
 });
