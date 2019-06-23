@@ -9,9 +9,9 @@ class NekoCommand extends commando.Command
     {
         super(client,
         {
-            name:'neko',
+            name:'neko_nsfw',
             group:'images',
-            memberName: 'neko',
+            memberName: 'neko_nsfw',
             description: 'nsfw neko.'
         })
     }

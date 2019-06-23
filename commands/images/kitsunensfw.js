@@ -9,9 +9,9 @@ class kitsuneCommand extends commando.Command
     {
         super(client,
         {
-            name:'kitsune',
+            name:'kitsune_nsfw',
             group:'images',
-            memberName: 'kitsune',
+            memberName: 'kitsune_nsfw',
             description: 'nsfw neko.'
         })
     }
