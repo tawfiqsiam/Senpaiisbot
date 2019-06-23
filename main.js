@@ -101,7 +101,7 @@ bot.on("message", function(message){
         else
         message.reply("`Hello!`");
     }
-      lastmessagesend = message.content;
+    lastmessagesend = message.content;
 });
 
 bot.on("guildMemberAdd", function(member){

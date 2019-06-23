@@ -11,7 +11,7 @@ class kitsuneCommand extends commando.Command
         {
             name:'kitsune',
             group:'images',
-            memberName: 'neko',
+            memberName: 'kitsune',
             description: 'nsfw neko.'
         })
     }
