@@ -38,10 +38,11 @@ class cuddleCommand extends commando.Command
             return;
         }
         var ws = new discord.RichEmbed()
-        .addField(message.author + " cuddles " + target  , ":3", true)
+        .addField(""  , ":3", true)
         .setColor("#FF69B4")
         .setImage(cuddle.url)
         .setFooter("powered by nekos.life <3")
+        message.channel.send(message.author + " cuddles " + target);
         message.channel.sendEmbed(ws);
     }
 }
