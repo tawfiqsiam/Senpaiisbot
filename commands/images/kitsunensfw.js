@@ -36,7 +36,7 @@ class kitsuneCommand extends commando.Command
         .setColor("#FF69B4")
         .setImage(kkitsune.url)
         .setFooter("powered by nekos.life <3")
-        message.channel.sendEmbed(ws);
+        message.channel.send(ws);
     }
 }
 
