@@ -42,7 +42,7 @@ class cuddleCommand extends commando.Command
         .setColor("#FF69B4")
         .setImage(cuddle.url)
         .setFooter("powered by nekos.life <3")
-        //message.channel.send(message.author + " cuddles " + target);
+        message.channel.send(message.author + " cuddles " + target);
         message.channel.sendEmbed(ws);
     }
 }
