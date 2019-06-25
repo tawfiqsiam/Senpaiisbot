@@ -12,7 +12,7 @@ class kitsuneCommand extends commando.Command
             name:'kitsune_nsfw',
             group:'images',
             memberName: 'kitsune_nsfw',
-            description: 'nsfw neko.'
+            description: 'nsfw kitsune.'
         })
     }
 
