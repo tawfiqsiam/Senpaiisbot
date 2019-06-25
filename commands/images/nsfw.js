@@ -23,11 +23,11 @@ class NekoCommand extends commando.Command
             return;
         }
         var nneko;
-        if (args.content.toLowerCase().includes("hentai"))
+        if (args  == "hentai")
             nneko = await neko.nsfw.hentai();
-        else if(args.content.toLowerCase().includes("boobs"))
+        else if(args == "boobs")
             nneko = await neko.nsfw.boobs();
-        else if (args.content.toLowerCase().includes("anal"))
+        else if (args == "anal")
             nneko = await neko.nsfw.anal();
         else
         {
