@@ -38,7 +38,7 @@ class cuddleCommand extends commando.Command
             return;
         }
         var ws = new discord.RichEmbed()
-        .addField(message.author.username + " cuddles " + target.nickname, ":3", true)
+        .addField(" cuddles " , ":3", true)
         .setColor("#FF69B4")
         .setImage(cuddle.url)
         .setFooter("powered by nekos.life <3")

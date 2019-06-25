@@ -38,11 +38,11 @@ class hugCommand extends commando.Command
             return;
         }
         var ws = new discord.RichEmbed()
-        .addField(message.author.username + " hugs "+ target.nickname, ":3", true)
+        .addField(" hugs ", ":3", true)
         .setColor("#FF69B4")
         .setImage(hug.url)
         .setFooter("powered by nekos.life <3")
-       // message.channel.send(message.author + " hugs " + target);
+        message.channel.send(message.author + " hugs " + target);
         message.channel.sendEmbed(ws);
     }
 }
