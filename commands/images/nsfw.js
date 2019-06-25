@@ -9,10 +9,10 @@ class NekoCommand extends commando.Command
     {
         super(client,
         {
-            name:'neko_nsfw',
+            name:'nsfw',
             group:'images',
-            memberName: 'neko_nsfw',
-            description: 'nsfw neko.'
+            memberName: 'nsfw',
+            description: 'nsfw with hentai - boobs - anal'
         })
     }
 
@@ -23,14 +23,12 @@ class NekoCommand extends commando.Command
             return;
         }
         var nneko;
-        var chance = Math.floor(Math.random() * 2);
-        if (chance == 0){
-            nneko = await neko.nsfw.neko();
-        }
-        else 
-        {
-            nneko = await neko.nsfw.nekoGif();
-        }
+        if (args.content.toLowerCase().includes("hentai"))
+            nneko = await neko.nsfw.hentai();
+        else if(args.content.toLowerCase().includes("boobs"))
+            nneko = await neko.nsfw.boobs();
+        else if (args.content.toLowerCase().includes("anal"))
+            nneko = await neko.nsfw.anal();
 
         console.log(nneko)
         var ws = new discord.RichEmbed()
@@ -40,6 +38,7 @@ class NekoCommand extends commando.Command
         .setFooter("powered by nekos.life <3")
         message.channel.sendEmbed(ws);
     }
+    
 }
 
 module.exports = NekoCommand;

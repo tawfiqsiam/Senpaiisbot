@@ -39,7 +39,7 @@ class linksCommand extends cmd.Command
                     }
                 }
             }else{
-                message.channel.send("You have to provide on or off as an argument!`")
+                message.channel.send("`You have to provide on or off as an argument!`")
             }
         }
         else{

@@ -44,9 +44,9 @@ bot.on("message", function(message){
     if(lastmessagesend == message.content && !message.content.includes("!")){
         message.delete();
         message.author.send("`Please dont Spam!`")
-        console.log("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.name + " uid: " + message.author + "!" );
+        console.log("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.username + " uid: " + message.author + "!" );
         if(logChannel)
-            logChannel.send("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.name + " uid: " + message.author + "!")
+            logChannel.send("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.username + " uid: " + message.author + "!")
     }
 
     for(var i in bannedwords){
@@ -57,9 +57,9 @@ bot.on("message", function(message){
     {
         message.delete();
         message.author.send("`You arent allowed to use that word!`")
-        console.log("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.name + " uid: " + message.author + "!");
+        console.log("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.username + " uid: " + message.author + "!");
         if(logChannel)
-            logChannel.send("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.name + " uid: " + message.author + "!")
+            logChannel.send("Deleted "+ message.content + " from " + message.channel.name + " send by " + message.author.username + " uid: " + message.author + "!")
     }
 
 

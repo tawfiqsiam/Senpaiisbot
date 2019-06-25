@@ -5,16 +5,16 @@ const neko = new client();
 
 
 
-class cuddleCommand extends commando.Command
+class hugCommand extends commando.Command
 {
     constructor(client)
     {
         super(client,
         {
-            name:'cuddle',
+            name:'hug',
             group:'interactions',
-            memberName: 'cuddle',
-            description: 'cuddle other users.'
+            memberName: 'hug',
+            description: 'hug other users.'
         })
     }
 
@@ -25,26 +25,26 @@ class cuddleCommand extends commando.Command
             message.channel.send("You have to mention a user!");
             return;
         }
-        var cuddle = await neko.sfw.cuddle();
-        console.log(cuddle);
-        if(message.author == target)
+        var hug = await neko.sfw.hug();
+        console.log(hug);
+        if(target == message.author)
         {
             var selfcuddle = new discord.RichEmbed()
-            .addField(message.author + " cuddles himself", ":3", true)
+            .addField(message.author + " hugs himself", ":3", true)
             .setColor("#FF69B4")
-            .setImage(cuddle.url)
+            .setImage(hug.url)
             .setFooter("powered by nekos.life <3")
             message.channel.sendEmbed(selfcuddle);
             return;
         }
         var ws = new discord.RichEmbed()
-        .addField(message.author.username + " cuddles " + target.username, ":3", true)
+        .addField(message.author.username + " hugs "+ target.username, ":3", true)
         .setColor("#FF69B4")
-        .setImage(cuddle.url)
+        .setImage(hug.url)
         .setFooter("powered by nekos.life <3")
-        message.channel.send(message.author + " cuddles " + target);
+       // message.channel.send(message.author + " hugs " + target);
         message.channel.sendEmbed(ws);
     }
 }
 
-module.exports = cuddleCommand;
+module.exports = hugCommand;

@@ -22,7 +22,14 @@ class kitsuneCommand extends commando.Command
             message.reply("this channel isn't nsfw");
             return;
         }
-        var kkitsune = await neko.nsfw.kitsune();
+        var chance = Math.floor(Math.random() * 2);
+        if (chance == 0){
+            kkitsune = await neko.nsfw.kitsune();
+        }
+        else 
+        {
+            kkitsune = await await neko.nsfw.kitsuneGif();
+        }
         console.log(kkitsune)
         var ws = new discord.RichEmbed()
         .addField("kitsune", ":3", true)
