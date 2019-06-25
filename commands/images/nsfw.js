@@ -29,7 +29,11 @@ class NekoCommand extends commando.Command
             nneko = await neko.nsfw.boobs();
         else if (args.content.toLowerCase().includes("anal"))
             nneko = await neko.nsfw.anal();
-
+        else
+        {
+            message.channel.send("`You have to provide a valid argument!`")
+            return;
+        }
         console.log(nneko)
         var ws = new discord.RichEmbed()
         .addField("neko", "nya~", true)
@@ -38,7 +42,7 @@ class NekoCommand extends commando.Command
         .setFooter("powered by nekos.life <3")
         message.channel.sendEmbed(ws);
     }
-    
+
 }
 
 module.exports = NekoCommand;
