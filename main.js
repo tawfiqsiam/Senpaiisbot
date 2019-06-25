@@ -4,9 +4,9 @@ const discord = require("discord.js");
 
 const serverStats = {
     guildID: '471739831173775379',
-    totalUsersID: '592400519314800680',
-    memberCountID: '592400584573714432',
-    botCountID: '592400622528102474'
+    totalUsersID: '593133820534980656',
+    memberCountID: '593133846439133234',
+    botCountID: '593133878051471600'
 };
 
 //bot.registry.registergroup("simple", "simple"); 

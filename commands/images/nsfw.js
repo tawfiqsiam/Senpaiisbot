@@ -9,7 +9,7 @@ class NekoCommand extends commando.Command
     {
         super(client,
         {
-            name:'nsfw',
+            name:'porn',
             group:'images',
             memberName: 'nsfw',
             description: 'nsfw with hentai - boobs - anal'
