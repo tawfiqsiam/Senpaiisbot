@@ -36,7 +36,7 @@ class NekoCommand extends commando.Command
         }
         console.log(nneko)
         var ws = new discord.RichEmbed()
-        .addField("neko", "nya~", true)
+        .addField("owo whats this", "nya~", true)
         .setColor("#FF69B4")
         .setImage(nneko.url)
         .setFooter("powered by nekos.life <3")
