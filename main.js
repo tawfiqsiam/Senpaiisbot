@@ -44,11 +44,11 @@ bot.on("message", function (message) {
         return;
 
     let logChannel = message.guild.channels.find(`name`, "logs");
-    let CommandChannel = message.guild.channel.find(`name`, "commands");
+    let commandChannel = message.guild.channel.find(`name`, "commands");
 
     //chatfilter
     var found = false;
-    if (message.channel == CommandChannel) {
+    if (message.channel == commandChannel) {
         if (message.content.charAt(0) != "!") {
             message.author.send("`In the Command Channel only Bot Commands are allowed!`");
             if (logChannel)
