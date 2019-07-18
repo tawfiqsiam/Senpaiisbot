@@ -3,43 +3,50 @@ const discord = require('discord.js');
 const client = require('nekos.life');
 const neko = new client();
 //credits kawaii#9523
-class NekoCommand extends commando.Command
-{
-    constructor(client)
-    {
+class NekoCommand extends commando.Command {
+    constructor(client) {
         super(client,
-        {
-            name:'porn',
-            group:'images',
-            memberName: 'nsfw',
-            description: 'nsfw with hentai - boobs - anal'
-        })
+            {
+                name: 'hentai',
+                group: 'images',
+                memberName: 'nsfw',
+                description: 'nsfw with normal - boobs - anal'
+            })
     }
 
-    async run(message, args)
-    {
-        if(message.channel.nsfw == false){
+    async run(message, args) {
+        if (message.channel.nsfw == false) {
             message.reply("this channel isn't nsfw");
             return;
         }
         var nneko;
-        if (args  == "hentai")
+        if (args == "normal")
             nneko = await neko.nsfw.hentai();
-        else if(args == "boobs")
+        else if (args == "boobs")
             nneko = await neko.nsfw.boobs();
         else if (args == "anal")
             nneko = await neko.nsfw.anal();
-        else
-        {
-            message.channel.send("`You have to provide a valid argument!`")
-            return;
+        else {
+            var chance = Math.floor(Math.random() * 5);
+            switch (chance) {
+                case 0:
+                    nneko = await neko.nsfw.hentai(); break;
+                case 1:
+                    nneko = await neko.nsfw.anal(); break;
+                case 2:
+                    nneko = await neko.nsfw.bJ(); break;
+                case 3:
+                    nneko = await neko.nsfw.tits(); break;
+                case 4:
+                    nneko = await neko.nsfw.boobs(); break;
+            }
         }
         console.log(nneko)
         var ws = new discord.RichEmbed()
-        .addField("owo whats this", "nya~", true)
-        .setColor("#FF69B4")
-        .setImage(nneko.url)
-        .setFooter("powered by nekos.life <3")
+            .addField("owo whats this", "nya~", true)
+            .setColor("#FF69B4")
+            .setImage(nneko.url)
+            .setFooter("powered by nekos.life <3")
         message.channel.send(ws);
     }
 
