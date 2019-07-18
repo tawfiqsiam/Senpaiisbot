@@ -12,7 +12,7 @@ class JoinKitsuneCommand extends cmd.Command {
     }
     async run(message, args) {
         let logChannel = message.guild.channels.find(`name`, "logs");
-        let CommandChannel = message.member.guild.channels.find(`name`, "commands");
+        let CommandChannel = message.guild.channels.find(`name`, "commands");
 
         if (message.channel != CommandChannel) {
             message.delete();

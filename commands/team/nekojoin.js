@@ -18,7 +18,7 @@ class JoinNekoCommand extends cmd.Command {
                 else
                 message.member.addRole(Neko);*/
         let logChannel = message.guild.channels.find(`name`, "logs");
-        let CommandChannel = message.member.guild.channels.find("name", "commands");
+        let CommandChannel = message.guild.channels.find(`name`, "commands");
 
         if (message.channel != CommandChannel) {
             message.delete();
@@ -29,15 +29,15 @@ class JoinNekoCommand extends cmd.Command {
         let Neko = message.member.guild.roles.find("name", "Neko");
         // let Kitsune = message.member.guild.roles.find("name", "Kitsune");
         if (message.member.roles.find("name", "Kitsune")) {
-            message.reply("`You are already a Kitsune! :3`")
+            message.author.send("`You are already a Kitsune! :3`")
         }
         else {
             if (message.member.roles.find("name", "Neko")) {
-                message.reply("`You are already a Neko! Nyaa~`")
+                message.author.send("`You are already a Neko! Nyaa~`")
             }
             else {
                 message.member.addRole(Neko);
-                message.reply("`Welcome to the Nekos! Nyaa~`");
+                message.author.send("`Welcome to the Nekos! Nyaa~`");
                 currentNekoMembers.push(message.author);
             }
         }
