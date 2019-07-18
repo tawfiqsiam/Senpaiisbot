@@ -44,7 +44,7 @@ bot.on("message", function (message) {
         return;
 
     let logChannel = message.guild.channels.find(`name`, "logs");
-    let commandChannel = message.guild.channel.find(`name`, "commands");
+    let commandChannel = message.guild.channels.find(`name`, "commands");
 
     //chatfilter
     var found = false;
