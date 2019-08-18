@@ -57,7 +57,7 @@ bot.on("message", function (message) {
         }
         message.delete();
     }
-    if (lastmessagesend == message.content && !message.content.includes("!")) {
+    if (lastmessagesend == message.content && message.content.length > 1 && !message.content.includes("!")) {
         message.delete();
         message.author.send("`Please dont Spam!`")
         console.log("Deleted " + message.content + " from " + message.channel.name + " send by " + message.author.username + " uid: " + message.author + "!");
@@ -150,7 +150,7 @@ bot.on("ready", function () {
     let statuses = [
         "Working hardly for my master!",
         "Im not allowed to prefer nekos or kitsunes :3",
-        "Creator:⎝⎝✧Senͥ𝕡aͣiͫi✧⎠⎠#1633",
+        "Creator: Senpaii|先輩#1633",
         "Advantage through technology!",
         "redcore.win is my favorite site!"
     ]
@@ -166,4 +166,4 @@ bot.on("ready", function () {
 
 });
 //Discord Server this Bot is on: https://discord.gg/CgGtZdm
-bot.login(process.env.BOT_TOKEN);   //Bot by Senpaii -> Discord: ⎝⎝✧Senͥ𝕡aͣiͫi✧⎠⎠#1633
+bot.login(process.env.BOT_TOKEN);   //Bot by Senpaii -> Discord: Senpaii|先輩#1633
