@@ -5,10 +5,10 @@ class KitsuneCommand extends cmd.Command {
     constructor(client) {
         super(client, {
 
-            name: "kitsuneinfo",
+            name: "knightinfo",
             group: "team",
-            memberName: "kitsuneinfo",
-            description: "Get information about the kitsunes! Nyaa~"
+            memberName: "knightinfo",
+            description: "Get information about the knights!~"
         });
     }
     async run(message, args) {
@@ -19,4 +19,4 @@ class KitsuneCommand extends cmd.Command {
 
 }
 
-module.exports = KitsuneCommand;
+module.exports = KnightCommand;
