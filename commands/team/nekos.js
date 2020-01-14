@@ -6,7 +6,7 @@ class NekoCommand extends cmd.Command {
 
             name: "nekoinfo",
             group: "team",
-            memberName: "Members info",
+            memberName: "nekoinfo",
             description: "Get information about the Members !~"
         });
     }
