@@ -44,7 +44,7 @@ bot.on("message", function (message) {
         return;
 
     let logChannel = message.guild.channels.find(`name`, "logs");
-    let commandChannel = message.guild.channels.find(`name`, "commands");
+    let commandChannel = message.guild.channels.find(`name`, "self-roles");
 
     //chatfilter
     var found = false;
@@ -72,7 +72,7 @@ bot.on("message", function (message) {
     if (found) {
         message.delete();
         message.author.send("`You arent allowed to use that word!`")
-        console.log("Deleted " + message.content + " from " + message.channel.name + " send by " + message.author.username + " uid: " + message.author + "!");
+        console.log("Deleted " + message.content + " from " + message.channel.name + " send by " + message.author.username + " said: " + message.author + "!");
         if (logChannel)
             logChannel.send("Deleted " + message.content + " from " + message.channel.name + " send by " + message.author.username + " uid: " + message.author + "!")
     }
@@ -156,7 +156,7 @@ bot.on("ready", function () {
     ]
     console.log("Bot is running!");
 
-    //message.member.roles.find("name","Neko")
+    //message.member.roles.find("name","Lord")
     setInterval(function () {
         let status = statuses[Math.floor(Math.random() * statuses.length)]
         bot.user.setActivity(status);
