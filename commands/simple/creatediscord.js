@@ -16,24 +16,24 @@ class CreateCommand extends cmd.Command {
   }
   async run(message, args) {
     if (message.member.roles.find("name", "God") || message.member.hasPermission("ADMINISTRATOR")) {
-      if (message.guild.roles.find("name", "Neko")) {
+      if (message.guild.roles.find("name", "spy")) {
         message.channel.send("`Group Neko already exists skipping..`");
       }
       else {
         message.guild.createRole({
-          name: "Neko",
+          name: "spy",
           permissions: [1278594241],
           color: "FF0000",
           position: "4",
           mentionable: true,
         });
       }
-      if (message.guild.roles.find("name", "Kitsune")) {
+      if (message.guild.roles.find("name", "Knight")) {
         message.channel.send("`Group Kitsune already exists skipping..`");
       }
       else {
         message.guild.createRole({
-          name: "Kitsune",
+          name: "Knight",
           permissions: [1278594241],
           color: "#00FFFF",
           position: "5",
@@ -52,34 +52,30 @@ class CreateCommand extends cmd.Command {
           mentionable: true,
         });
       }
-      if (message.guild.roles.find("name", "Neko Sensei")) {
-        message.channel.send("`Group Neko Sensei already exists skipping..`");
+      if (message.guild.roles.find("name", "Prince")) {
+        message.channel.send("`Group Prince already exists skipping..`");
       }
       else {
         message.guild.createRole({
-          name: "Neko Sensei",
+          name: "Prince",
           permissions: [1341652179],
           position: "2",
           color: "#FFFF33",
           mentionable: true,
         });
       }
-      if (message.guild.roles.find("name", "Kitsune Sensei")) {
-        message.channel.send("`Group Kitsune Sensei already exists skipping..`");
+      if (message.guild.roles.find("name", "Princess")) {
+        message.channel.send("`Group Princess already exists skipping..`");
       }
       else {
         message.guild.createRole({
-          name: "Kitsune Sensei",
+          name: "Princess",
           permissions: [1341652179],
           position: "3",
           color: "#32CD32",
           mentionable: true,
         });
       }
-      message.guild.createChannel("Rules", "text");
-      message.guild.createChannel("Commands", "text");
-      message.guild.createChannel("Bot", "category");
-      message.guild.createChannel("Logs", "text");
       message.channel.send("`Succesfully created all roles!`");
       message.channel.send("`You can edit the Permissions of the Roles to your likeable!`");
     }
