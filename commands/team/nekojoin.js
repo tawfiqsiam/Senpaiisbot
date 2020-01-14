@@ -18,7 +18,7 @@ class JoinLordCommand extends cmd.Command {
                 else
                 message.member.addRole(Lord);*/
         let logChannel = message.guild.channels.find(`name`, "logs");
-        let CommandChannel = message.guild.channels.find(`name`, "commands");
+        let CommandChannel = message.guild.channels.find(`name`, "self-roles");
 
         if (message.channel != CommandChannel) {
             message.delete();
