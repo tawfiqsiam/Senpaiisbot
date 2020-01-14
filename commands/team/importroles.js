@@ -11,13 +11,13 @@ class ImportCommand extends cmd.Command {
     });
   }
   async run(message, args) {
-    let spyMembers = discord.Guild.roles("Spy").member;
-    let KnightMembers = discord.Guild.roles("Kitsune").member;
+    let lordMembers = discord.Guild.roles("Lord").member;
+    let KnightMembers = discord.Guild.roles("Knight").member;
 
 
 
-    if (message.member.roles.find("name", "Monarch of the Neko`s")) {
-      currentNekoMembers.push(SpyMembers);
+    if (message.member.roles.find("name", "Monarch of the Lord`s")) {
+      currentNekoMembers.push(LordMembers);
       currentKitsuneMembers.push(KnightMembers);
     }
     else {
