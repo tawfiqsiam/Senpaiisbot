@@ -11,9 +11,9 @@ class JoinLordCommand extends cmd.Command {
         });
     }
     async run(message, args) {
-        /*      let Kitsune = message.member.guid.roles.find("name", "Knight");
-                let Neko = message.member.guid.roles.find("name", "Lord")
-                if (Kitsune)
+        /*      let Knight = message.member.guid.roles.find("name", "Knight");
+                let Lord = message.member.guid.roles.find("name", "Lord")
+                if (Knight)
                 return;
                 else
                 message.member.addRole(Lord);*/
@@ -26,8 +26,8 @@ class JoinLordCommand extends cmd.Command {
                 logChannel.send("Deleted " + message.content + " from " + message.channel.name + " send by " + message.author.username + " uid: " + message.author + " Reason: Command outside of Command Channel!");
             return;
         }
-        let Neko = message.member.guild.roles.find("name", "Lord");
-        // let Kitsune = message.member.guild.roles.find("name", "Knight");
+        let Lord = message.member.guild.roles.find("name", "Lord");
+        // let Knight = message.member.guild.roles.find("name", "Knight");
         if (message.member.roles.find("name", "Knight")) {
             message.author.send("`You are already a Kinght! :3`")
         }
@@ -38,7 +38,7 @@ class JoinLordCommand extends cmd.Command {
             else {
                 message.member.addRole(Lord);
                 message.author.send("`Welcome to the Lords! ~`");
-                currentNekoMembers.push(message.author);
+                currentLordMembers.push(message.author);
             }
         }
     }
