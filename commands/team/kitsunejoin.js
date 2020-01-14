@@ -4,15 +4,15 @@ class JoinKitsuneCommand extends cmd.Command {
     constructor(client) {
         super(client, {
 
-            name: "kitsune",
+            name: "Knight",
             group: "team",
-            memberName: "kitsune",
-            description: "Be a member of the Kitsunes!"
+            memberName: "Knight",
+            description: "Be a member of the Knights!"
         });
     }
     async run(message, args) {
         let logChannel = message.guild.channels.find(`name`, "logs");
-        let CommandChannel = message.guild.channels.find(`name`, "commands");
+        let CommandChannel = message.guild.channels.find(`name`, "self-roles");
 
         if (message.channel != CommandChannel) {
             message.delete();
@@ -20,17 +20,17 @@ class JoinKitsuneCommand extends cmd.Command {
                 logChannel.send("Deleted " + message.content + " from " + message.channel.name + " send by " + message.author.username + " uid: " + message.author + " Reason: Command outside of Command Channel!");
             return;
         }
-        let Kitsune = message.member.guild.roles.find("name", "Kitsune");
-        if (message.member.roles.find("name", "Neko")) {
-            message.author.send("`You are already a Neko! Nyaa~`")
+        let Kitsune = message.member.guild.roles.find("name", "Knight");
+        if (message.member.roles.find("name", "Spy")) {
+            message.author.send("`You are already a Spy!~`")
         }
         else {
-            if (message.member.roles.find("name", "Kitsune")) {
+            if (message.member.roles.find("name", "Knight")) {
                 message.author.send("`You are already a Kitsune! :3`")
             }
             else {
                 message.member.addRole(Kitsune);
-                message.author.send("`Welcome to the Kitsunes! :3`");
+                message.author.send("`Welcome to the Knights! :3`");
                 currentKitsuneMembers.push(message.author);
             }
         }
