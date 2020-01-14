@@ -1,7 +1,7 @@
 const cmd = require("discord.js-commando");
 const discord = require("discord.js");
 
-class KitsuneCommand extends cmd.Command {
+class KnightCommand extends cmd.Command {
     constructor(client) {
         super(client, {
 
@@ -12,8 +12,8 @@ class KitsuneCommand extends cmd.Command {
         });
     }
     async run(message, args) {
-        message.channel.send("Kitsune Members:")
-        message.channel.send(currentKitsuneMembers)
+        message.channel.send("Knight Members:")
+        message.channel.send(currentKnightMembers)
     }
 
 
