@@ -1,21 +1,21 @@
 const cmd = require("discord.js-commando");
 const discord = require("discord.js");
-class NekoCommand extends cmd.Command {
+class LordCommand extends cmd.Command {
     constructor(client) {
         super(client, {
 
-            name: "nekoinfo",
+            name: "lordinfo",
             group: "team",
-            memberName: "nekoinfo",
-            description: "Get information about the Members !~"
+            memberName: "lordinfo",
+            description: "Get information about the Lords !~"
         });
     }
     async run(message, args) {
         message.channel.send("Members:")
-        message.channel.send(currentNekoMembers)
+        message.channel.send(currentLordMembers)
     }
 
 
 }
 
-module.exports = NekoCommand;
+module.exports = LordCommand;
