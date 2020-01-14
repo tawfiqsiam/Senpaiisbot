@@ -11,14 +11,14 @@ class ImportCommand extends cmd.Command {
     });
   }
   async run(message, args) {
-    let NekoMembers = discord.Guild.roles("Neko").member;
-    let KitsuneMembers = discord.Guild.roles("Kitsune").member;
+    let spyMembers = discord.Guild.roles("Spy").member;
+    let KnightMembers = discord.Guild.roles("Kitsune").member;
 
 
 
     if (message.member.roles.find("name", "Monarch of the Neko`s")) {
-      currentNekoMembers.push(NekoMembers);
-      currentKitsuneMembers.push(KitsuneMembers);
+      currentNekoMembers.push(SpyMembers);
+      currentKitsuneMembers.push(KnightMembers);
     }
     else {
       message.channel.send("`You dont have enough Permissions to execute this command!`")
