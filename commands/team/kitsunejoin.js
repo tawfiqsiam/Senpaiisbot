@@ -4,9 +4,9 @@ class JoinKnightCommand extends cmd.Command {
     constructor(client) {
         super(client, {
 
-            name: "Knight",
+            name: "knight",
             group: "team",
-            memberName: "Knight",
+            memberName: "knight",
             description: "Be a member of the Knights!"
         });
     }
