@@ -16,12 +16,12 @@ class CreateCommand extends cmd.Command {
   }
   async run(message, args) {
     if (message.member.roles.find("name", "God") || message.member.hasPermission("ADMINISTRATOR")) {
-      if (message.guild.roles.find("name", "spy")) {
+      if (message.guild.roles.find("name", "Lord")) {
         message.channel.send("`Group Neko already exists skipping..`");
       }
       else {
         message.guild.createRole({
-          name: "spy",
+          name: "Lord",
           permissions: [1278594241],
           color: "FF0000",
           position: "4",
