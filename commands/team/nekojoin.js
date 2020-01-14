@@ -38,7 +38,7 @@ class JoinLordCommand extends cmd.Command {
             else {
                 message.member.addRole(Lord);
                 message.author.send("`Welcome to the Lords! ~`");
-                currentLordMembers.push(message.author);
+                currentNekoMembers.push(message.author);
             }
         }
     }
