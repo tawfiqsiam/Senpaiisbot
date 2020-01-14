@@ -26,8 +26,8 @@ class JoinLordCommand extends cmd.Command {
                 logChannel.send("Deleted " + message.content + " from " + message.channel.name + " send by " + message.author.username + " uid: " + message.author + " Reason: Command outside of Command Channel!");
             return;
         }
-        let Neko = message.member.guild.roles.find("name", "Neko");
-        // let Kitsune = message.member.guild.roles.find("name", "Kitsune");
+        let Neko = message.member.guild.roles.find("name", "Lord");
+        // let Kitsune = message.member.guild.roles.find("name", "Knight");
         if (message.member.roles.find("name", "Knight")) {
             message.author.send("`You are already a Kinght! :3`")
         }
