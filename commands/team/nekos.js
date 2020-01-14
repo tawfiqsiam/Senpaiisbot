@@ -6,12 +6,12 @@ class NekoCommand extends cmd.Command {
 
             name: "nekoinfo",
             group: "team",
-            memberName: "nekoinfo",
-            description: "Get information about the Nekos! Nyaa~"
+            memberName: "Members info",
+            description: "Get information about the Members !~"
         });
     }
     async run(message, args) {
-        message.channel.send("Neko Members:")
+        message.channel.send("Members:")
         message.channel.send(currentNekoMembers)
     }
 
