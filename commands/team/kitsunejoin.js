@@ -1,6 +1,6 @@
 const cmd = require("discord.js-commando");
 
-class JoinKitsuneCommand extends cmd.Command {
+class JoinKnightCommand extends cmd.Command {
     constructor(client) {
         super(client, {
 
@@ -39,4 +39,4 @@ class JoinKitsuneCommand extends cmd.Command {
 
 }
 
-module.exports = JoinKitsuneCommand;
+module.exports = JoinKnightCommand;
