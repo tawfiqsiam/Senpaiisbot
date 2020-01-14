@@ -104,7 +104,7 @@ bot.on("message", function (message) {
     //chatfilter end
 
     if (message.content == "Hello") {
-        if (message.author == "<@223876496291266560>")//senpaii
+        if (message.author == "<@618681842362744832>")//senpaii
             message.channel.send("`Hello, my dear creator!`");
         else
             message.reply("`Hello!`");
@@ -148,11 +148,11 @@ bot.on("guildMemberRemove", function (member) {
 
 bot.on("ready", function () {
     let statuses = [
-        "Working hardly for my master!",
-        "Im not allowed to prefer nekos or kitsunes :3",
-        "Creator: Senpaii|先輩#1633",
+        "Welcome to my KingDom",
+        "Ping for help",
+        "Created By StarZz",
         "Advantage through technology!",
-        "redcore.win is my favorite site!"
+        "Say !help for help"
     ]
     console.log("Bot is running!");
 
