@@ -12,7 +12,7 @@ class LordCommand extends cmd.Command {
     }
     async run(message, args) {
         message.channel.send("Members:")
-        message.channel.send(currentLordMembers)
+        message.channel.send(currentNekoMembers)
     }
 
 
