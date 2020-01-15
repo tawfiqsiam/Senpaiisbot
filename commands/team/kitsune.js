@@ -13,7 +13,7 @@ class KnightCommand extends cmd.Command {
     }
     async run(message, args) {
         message.channel.send("Knight Members:")
-        message.channel.send(currentKnightMembers)
+        message.channel.send(currentkitsuneMembers)
     }
 
 
