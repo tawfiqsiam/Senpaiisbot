@@ -62,7 +62,7 @@ bot.on('message', (message) => {
             else if(parts[0] == '26') {
             message.member.addRole(FOUR);
         }
-    }
+    
 
 });
 
