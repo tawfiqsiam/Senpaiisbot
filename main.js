@@ -103,6 +103,15 @@ bot.on('message', (message) => {
             else if(parts[0] == 'yellow') {
             message.member.addRole(YELLOW);
         }       
+            else if(parts[0] == 'BLACK') {
+            message.member.addRole(BLACK);
+        }
+                   else if(parts[0] == 'Black') {
+            message.member.addRole(BLACK);
+        }
+            else if(parts[0] == 'black') {
+            message.member.addRole(BLACK);
+        }
 });         
 
 bot.registry.registerGroup("simple", "Simple")
