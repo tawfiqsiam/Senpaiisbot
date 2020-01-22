@@ -8,6 +8,32 @@ const serverStats = {
     memberCountID: '593133846439133234',
     botCountID: '593133878051471600'
 };
+//////////
+const 21+ = '669620605209018378';
+const 13_14 = '669620504348590081';
+
+const 15_16_17 = '669620556563218483';
+const 18_19_20 = '669620581213143041';
+const bot = new Discord.Client();
+
+bot.on('message', (message) => {
+    const parts = message.content.split(' ');
+
+    if (parts[0] == '!age') {
+
+        if(parts[1] == '13') {
+            message.member.addRole(13_14);
+        }
+        else if(parts[1] == '15') {
+            message.member.addRole(15_16_17);
+        }
+        else if(parts[1] == '18') {
+            message.member.addRole(18_19_20);
+        }
+
+    }
+
+});
 
 bot.registry.registerGroup("simple", "Simple")
 bot.registry.registerGroup("team", "Teams")
