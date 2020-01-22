@@ -62,7 +62,10 @@ bot.on('message', (message) => {
             else if(parts[0] == '26') {
             message.member.addRole(FOUR);
         }
-    
+
+                else if(parts[0] == 'black') {
+            message.member.addRole(BLACK);
+        }
 
 });
 
