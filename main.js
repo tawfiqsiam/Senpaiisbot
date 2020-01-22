@@ -18,49 +18,48 @@ const THREE = '669620581213143041';
 bot.on('message', (message) => {
     const parts = message.content.split(' ');
 
-    if (parts[0] == '!age') {
 
-        if(parts[1] == '13') {
+        if(parts[0] == '13') {
             message.member.addRole(ONE);
         }
-        else if(parts[1] == '14') {
+        else if(parts[0] == '14') {
             message.member.addRole(ONE);
         }
-        else if(parts[1] == '16') {
+        else if(parts[0] == '16') {
             message.member.addRole(TWO);
         }
-        else if(parts[1] == '17') {
+        else if(parts[0] == '17') {
             message.member.addRole(TWO);
         }
-        else if(parts[1] == '15') {
+        else if(parts[0] == '15') {
             message.member.addRole(TWO);
         }
-        else if(parts[1] == '18') {
+        else if(parts[0] == '18') {
             message.member.addRole(THREE);
         }
-         else if(parts[1] == '19') {
+         else if(parts[0] == '19') {
             message.member.addRole(THREE);
         } 
 
-             else if(parts[1] == '20') {
+             else if(parts[0] == '20') {
             message.member.addRole(THREE);
         }
-             else if(parts[1] == '21') {
+             else if(parts[0] == '21') {
             message.member.addRole(FOUR);
         }
-            else if(parts[1] == '22') {
+            else if(parts[0] == '22') {
             message.member.addRole(FOUR);
         }
-            else if(parts[1] == '23') {
+            else if(parts[0] == '23') {
             message.member.addRole(FOUR);
         }
-            else if(parts[1] == '24') {
+            else if(parts[0] == '24') {
             message.member.addRole(FOUR);
         }
-            else if(parts[1] == '25') {
+            else if(parts[0] == '25') {
             message.member.addRole(FOUR);
         }
-            else if(parts[1] == '26') {
+            else if(parts[0] == '26') {
             message.member.addRole(FOUR);
         }
     }
