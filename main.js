@@ -14,6 +14,7 @@ const ONE = '669620504348590081';
 
 const TWO = '669620556563218483';
 const THREE = '669620581213143041';
+const BLACK = '669648089258131477';
 
 bot.on('message', (message) => {
     const parts = message.content.split(' ');
@@ -66,8 +67,13 @@ bot.on('message', (message) => {
                 else if(parts[0] == 'black') {
             message.member.addRole(BLACK);
         }
-
-});
+            else if(parts[0] == 'BLACK') {
+            message.member.addRole(BLACK);
+        }
+            else if(parts[0] == 'Black') {
+            message.member.addRole(BLACK);
+        }
+});          
 
 bot.registry.registerGroup("simple", "Simple")
 bot.registry.registerGroup("team", "Teams")
