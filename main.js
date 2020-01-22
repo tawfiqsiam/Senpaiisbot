@@ -31,6 +31,9 @@ bot.on('message', (message) => {
             message.member.addRole(18_19_20);
         }
 
+        else if(parts[1] == '21') {
+            message.member.addRole(21);
+        }
     }
 
 });
