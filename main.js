@@ -14,8 +14,11 @@ const ONE = '669620504348590081';
 
 const TWO = '669620556563218483';
 const THREE = '669620581213143041';
-const BLACK = '669648089258131477';
-
+const BLUE = '669647515829796865';
+const RED = '669640221804986368';
+const YELLOW = '669640221804986368';
+const PINK = '669646643918012450';
+const BLACK = '669655778101166088';
 bot.on('message', (message) => {
     const parts = message.content.split(' ');
 
@@ -64,16 +67,43 @@ bot.on('message', (message) => {
             message.member.addRole(FOUR);
         }
 
-                else if(parts[0] == 'black') {
+                else if(parts[0] == 'blue') {
             message.member.addRole(BLACK);
         }
-            else if(parts[0] == 'BLACK') {
+            else if(parts[0] == 'BLUE') {
             message.member.addRole(BLACK);
         }
-            else if(parts[0] == 'Black') {
+            else if(parts[0] == 'Blue') {
             message.member.addRole(BLACK);
         }
-});          
+            else if(parts[0] == 'red') {
+            message.member.addRole(RED);
+        }
+            else if(parts[0] == 'Red') {
+            message.member.addRole(RED);
+        }
+            else if(parts[0] == 'Red') {
+            message.member.addRole(RED);
+        }
+            else if(parts[0] == 'PINK') {
+            message.member.addRole(PINK);
+        }
+            else if(parts[0] == 'Pink') {
+            message.member.addRole(PINK);
+        }
+            else if(parts[0] == 'pinK') {
+            message.member.addRole(PINK);
+        }
+            else if(parts[0] == 'YELLOW') {
+            message.member.addRole(YELLOW);
+        }
+            else if(parts[0] == 'Yellow') {
+            message.member.addRole(YELLOW);
+        }
+            else if(parts[0] == 'yellow') {
+            message.member.addRole(YELLOW);
+        }       
+});         
 
 bot.registry.registerGroup("simple", "Simple")
 bot.registry.registerGroup("team", "Teams")
