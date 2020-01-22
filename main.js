@@ -14,7 +14,6 @@ const ONE = '669620504348590081';
 
 const TWO = '669620556563218483';
 const THREE = '669620581213143041';
-const bot = new Discord.Client();
 
 bot.on('message', (message) => {
     const parts = message.content.split(' ');
