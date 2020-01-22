@@ -9,11 +9,11 @@ const serverStats = {
     botCountID: '593133878051471600'
 };
 //////////
-const 21 = '669620605209018378';
-const 13_14 = '669620504348590081';
+const FOUR = '669620605209018378';
+const ONE = '669620504348590081';
 
-const 15_16_17 = '669620556563218483';
-const 18_19_20 = '669620581213143041';
+const TWO = '669620556563218483';
+const THREE = '669620581213143041';
 const bot = new Discord.Client();
 
 bot.on('message', (message) => {
@@ -22,17 +22,17 @@ bot.on('message', (message) => {
     if (parts[0] == '!age') {
 
         if(parts[1] == '13') {
-            message.member.addRole(13_14);
+            message.member.addRole(ONE);
         }
         else if(parts[1] == '15') {
-            message.member.addRole(15_16_17);
+            message.member.addRole(TWO);
         }
         else if(parts[1] == '18') {
-            message.member.addRole(18_19_20);
+            message.member.addRole(THREE);
         }
 
         else if(parts[1] == '21') {
-            message.member.addRole(21);
+            message.member.addRole(FOUR);
         }
     }
 
