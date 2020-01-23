@@ -1,4 +1,4 @@
-هconst cmd = require("discord.js-commando");
+const cmd = require("discord.js-commando");
 const bot = new cmd.Client();
 const discord = require("discord.js");
 
