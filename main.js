@@ -112,6 +112,33 @@ bot.on('message', (message) => {
             else if(parts[0] == 'black') {
             message.member.addRole(BLACK);
         }
+            if(parts[0] == 'New Roles') {
+            message.member.removeRole(ONE);
+}
+            if(parts[0] == 'New Roles') {
+            message.member.removeRole(TWO);
+ }
+           if(parts[0] == 'New Roles') {
+            message.member.removeRole(THREE);
+}
+           if(parts[0] == 'New Roles') {
+            message.member.removeRole(FOUR);
+}
+           if(parts[0] == 'New Roles') {
+            message.member.removeRole(RED);
+}
+           if(parts[0] == 'New Roles') {
+            message.member.removeRole(PINK);
+}
+           if(parts[0] == 'New Roles') {
+            message.member.removeRole(BLACK);
+}
+           if(parts[0] == 'New Roles') {
+            message.member.removeRole(BLUE);
+}
+           if(parts[0] == 'New Roles') {
+            message.member.removeRole(YELLOW);
+}
 });         
 
 bot.registry.registerGroup("simple", "Simple")
