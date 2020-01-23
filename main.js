@@ -20,6 +20,7 @@ const YELLOW = '669646643918012450';
 const PINK = '669647234651914240';
 const BLACK = '669655778101166088';
 const GRAY = '669855567678013460';
+const PURPLE = '669871307365679107';
 bot.on('message', (message) => {
     const parts = message.content.split(' ');
 
