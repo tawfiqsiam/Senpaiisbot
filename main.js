@@ -21,6 +21,7 @@ const PINK = '669647234651914240';
 const BLACK = '669655778101166088';
 const GRAY = '669855567678013460';
 const PURPLE = '669871307365679107';
+const GREEN = '669965891747971073';
 bot.on('message', (message) => {
     const parts = message.content.split(' ');
 
@@ -539,6 +540,141 @@ message.member.removeRole(GRAY);
 }
            if(parts[0] == 'gray') {
             message.member.removeRole(PURPLE);
+}
+if(parts[0] == 'Green') {
+            message.member.addRole(GREEN);
+        }
+        if(parts[0] == 'green') {
+            message.member.addRole(GREEN);
+        }
+        if(parts[0] == 'GREEN') {
+            message.member.addRole(GREEN);
+        }
+        if(parts[0] == 'Green') {
+            message.member.removeRole(BLACK);
+        }
+        if(parts[0] == 'Green') {
+            message.member.removeRole(BLUE);
+        }
+        if(parts[0] == 'Green') {
+            message.member.removeRole(RED);
+        }
+        if(parts[0] == 'Green') {
+            message.member.removeRole(PINK);
+        }
+        if(parts[0] == 'Green') {
+            message.member.removeRole(YELLOW);
+        }
+if(parts[0] == 'Green') {
+message.member.removeRole(GRAY);
+}
+if(parts[0] == 'Green') {
+message.member.removeRole(PURPLE);
+}
+if(parts[0] == 'green') {
+message.member.removeRole(BLACK);
+}
+if(parts[0] == 'green') {
+message.member.removeRole(BLUE);
+}
+if(parts[0] == 'green') {
+message.member.removeRole(RED);
+}
+if(parts[0] == 'green') {
+message.member.removeRole(PINK);
+}
+if(parts[0] == 'green') {
+message.member.removeRole(YELLOW);
+}
+if(parts[0] == 'green') {
+message.member.removeRole(GRAY);
+}
+if(parts[0] == 'green') {
+message.member.removeRole(PURPLE);
+}
+if(parts[0] == 'GREEN') {
+message.member.removeRole(BLACK);
+}
+if(parts[0] == 'GREEN') {
+message.member.removeRole(BLUE);
+}
+if(parts[0] == 'GREEN') {
+message.member.removeRole(RED);
+}
+if(parts[0] == 'GREEN') {
+message.member.removeRole(PINK);
+}
+if(parts[0] == 'GREEN') {
+message.member.removeRole(YELLOW);
+}
+if(parts[0] == 'GREEN') {
+message.member.removeRole(GRAY);
+}
+if(parts[0] == 'GREEN') {
+message.member.removeRole(PURPLE);
+}
+           if(parts[0] == 'Yellow') {
+            message.member.removeRole(GREEN);
+}
+           if(parts[0] == 'YELLOW') {
+            message.member.removeRole(GREEN);
+}
+           if(parts[0] == 'yellow') {
+            message.member.removeRole(GREEN);
+}
+           if(parts[0] == 'Black') {
+            message.member.removeRole(GREEN);
+}
+           if(parts[0] == 'BLACK') {
+            message.member.removeRole(GREEN);
+}
+           if(parts[0] == 'black') {
+            message.member.removeRole(GREEN);
+}
+ if(parts[0] == 'Pink') {
+            message.member.removeRole(GREEN);
+}
+           if(parts[0] == 'PINK') {
+            message.member.removeRole(GREEN);
+}
+           if(parts[0] == 'pink') {
+            message.member.removeRole(GREEN);
+}
+ if(parts[0] == 'Red') {
+            message.member.removeRole(GREEN);
+}
+           if(parts[0] == 'RED') {
+            message.member.removeRole(GREEN);
+}
+           if(parts[0] == 'red') {
+            message.member.removeRole(GREEN);
+}
+            if(parts[0] == 'Blue') {
+            message.member.removeRole(GREEN);
+}
+           if(parts[0] == 'BLUE') {
+            message.member.removeRole(GREEN);
+}
+           if(parts[0] == 'blue') {
+            message.member.removeRole(GREEN);
+}
+if(parts[0] == 'Gray') {
+message.member.removeRole(GREEN);
+}
+if(parts[0] == 'GRAY') {
+message.member.removeRole(GREEN);
+}
+if(parts[0] == 'gray') {
+message.member.removeRole(GREEN);
+}
+if(parts[0] == 'Purple') {
+message.member.removeRole(GREEN);
+}
+if(parts[0] == 'PURPLE') {
+message.member.removeRole(GREEN);
+}
+if(parts[0] == 'purple') {
+message.member.removeRole(GREEN);
 }
            if(parts[0] == '15') {
             message.member.removeRole(ONE);
