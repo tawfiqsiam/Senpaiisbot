@@ -139,6 +139,189 @@ bot.on('message', (message) => {
            if(parts[0] == 'delall') {
             message.member.removeRole(YELLOW);
 }
+           if(parts[0] == 'delall') {
+            message.member.removeRole(YELLOW);
+}
+  if(parts[0] == 'Blue') {
+            message.member.removeRole(YELLOW);
+}
+           if(parts[0] == 'BLUE') {
+            message.member.removeRole(YELLOW);
+}
+           if(parts[0] == 'blue') {
+            message.member.removeRole(YELLOW);
+}
+           if(parts[0] == 'Blue') {
+            message.member.removeRole(BLACK);
+}
+           if(parts[0] == 'BLUE') {
+            message.member.removeRole(BLACK);
+}
+           if(parts[0] == 'blue') {
+            message.member.removeRole(BLACK);
+}
+           if(parts[0] == 'Blue') {
+            message.member.removeRole(RED);
+}
+           if(parts[0] == 'BLUE') {
+            message.member.removeRole(RED);
+}
+           if(parts[0] == 'blue') {
+            message.member.removeRole(RED);
+}
+           if(parts[0] == 'Blue') {
+            message.member.removeRole(PINK);
+}
+           if(parts[0] == 'BLUE') {
+            message.member.removeRole(PINK);
+}
+           if(parts[0] == 'blue') {
+            message.member.removeRole(PINK);
+}
+  if(parts[0] == 'Red') {
+            message.member.removeRole(YELLOW);
+}
+           if(parts[0] == 'RED') {
+            message.member.removeRole(YELLOW);
+}
+           if(parts[0] == 'red') {
+            message.member.removeRole(YELLOW);
+}
+           if(parts[0] == 'Red') {
+            message.member.removeRole(BLACK);
+}
+           if(parts[0] == 'RED') {
+            message.member.removeRole(BLACK);
+}
+           if(parts[0] == 'red') {
+            message.member.removeRole(BLACK);
+}
+           if(parts[0] == 'Red') {
+            message.member.removeRole(BLUE);
+}
+           if(parts[0] == 'RED') {
+            message.member.removeRole(BLUE);
+}
+           if(parts[0] == 'red') {
+            message.member.removeRole(BLUE);
+}
+           if(parts[0] == 'Red') {
+            message.member.removeRole(PINK);
+}
+           if(parts[0] == 'RED') {
+            message.member.removeRole(PINK);
+}
+           if(parts[0] == 'red') {
+            message.member.removeRole(PINK);
+}
+ if(parts[0] == 'Pink') {
+            message.member.removeRole(YELLOW);
+}
+           if(parts[0] == 'PINK') {
+            message.member.removeRole(YELLOW);
+}
+           if(parts[0] == 'pink') {
+            message.member.removeRole(YELLOW);
+}
+           if(parts[0] == 'Pink') {
+            message.member.removeRole(BLACK);
+}
+           if(parts[0] == 'PINK') {
+            message.member.removeRole(BLACK);
+}
+           if(parts[0] == 'pink') {
+            message.member.removeRole(BLACK);
+}
+           if(parts[0] == 'Pink') {
+            message.member.removeRole(BLUE);
+}
+           if(parts[0] == 'PINK') {
+            message.member.removeRole(BLUE);
+}
+           if(parts[0] == 'pink') {
+            message.member.removeRole(BLUE);
+}
+           if(parts[0] == 'Pink') {
+            message.member.removeRole(RED);
+}
+           if(parts[0] == 'PINK') {
+            message.member.removeRole(RED);
+}
+           if(parts[0] == 'pink') {
+            message.member.removeRole(RED);
+}
+if(parts[0] == 'Black') {
+            message.member.removeRole(YELLOW);
+}
+           if(parts[0] == 'BLACK') {
+            message.member.removeRole(YELLOW);
+}
+           if(parts[0] == 'black') {
+            message.member.removeRole(YELLOW);
+}
+           if(parts[0] == 'Black') {
+            message.member.removeRole(PINK);
+}
+           if(parts[0] == 'BLACK') {
+            message.member.removeRole(PINK);
+}
+           if(parts[0] == 'black') {
+            message.member.removeRole(PINK);
+}
+           if(parts[0] == 'Black') {
+            message.member.removeRole(BLUE);
+}
+           if(parts[0] == 'BLACK') {
+            message.member.removeRole(BLUE);
+}
+           if(parts[0] == 'black') {
+            message.member.removeRole(BLUE);
+}
+           if(parts[0] == 'Black') {
+            message.member.removeRole(RED);
+}
+           if(parts[0] == 'BLACK') {
+            message.member.removeRole(RED);
+}
+           if(parts[0] == 'black') {
+            message.member.removeRole(RED);
+}
+if(parts[0] == 'Yellow') {
+            message.member.removeRole(BLACK);
+}
+           if(parts[0] == 'YELLOW') {
+            message.member.removeRole(BLACK);
+}
+           if(parts[0] == 'yellow') {
+            message.member.removeRole(BLACK);
+}
+           if(parts[0] == 'Yellow') {
+            message.member.removeRole(PINK);
+}
+           if(parts[0] == 'YELLOW') {
+            message.member.removeRole(PINK);
+}
+           if(parts[0] == 'yellow') {
+            message.member.removeRole(PINK);
+}
+           if(parts[0] == 'Yellow') {
+            message.member.removeRole(BLUE);
+}
+           if(parts[0] == 'YELLOW') {
+            message.member.removeRole(BLUE);
+}
+           if(parts[0] == 'yellow') {
+            message.member.removeRole(BLUE);
+}
+           if(parts[0] == 'Yellow') {
+            message.member.removeRole(RED);
+}
+           if(parts[0] == 'YELLOW') {
+            message.member.removeRole(RED);
+}
+           if(parts[0] == 'yellow') {
+            message.member.removeRole(RED);
+}
 });         
 
 bot.registry.registerGroup("simple", "Simple")
