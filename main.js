@@ -423,7 +423,7 @@ if(parts[0] == 'Yellow') {
            if(parts[0] == '23') {
             message.member.removeRole(ONE);
 }
-           if(parts[0] == 24') {
+           if(parts[0] == '24') {
             message.member.removeRole(THREE);
 }
            if(parts[0] == '24') {
