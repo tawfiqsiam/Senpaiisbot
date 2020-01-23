@@ -1,4 +1,4 @@
-const cmd = require("discord.js-commando");
+هconst cmd = require("discord.js-commando");
 const bot = new cmd.Client();
 const discord = require("discord.js");
 
@@ -68,13 +68,13 @@ bot.on('message', (message) => {
         }
 
                 else if(parts[0] == 'blue') {
-            message.member.addRole(BLACK);
+            message.member.addRole(BLUE);
         }
             else if(parts[0] == 'BLUE') {
-            message.member.addRole(BLACK);
+            message.member.addRole(BLUE);
         }
             else if(parts[0] == 'Blue') {
-            message.member.addRole(BLACK);
+            message.member.addRole(BLUE);
         }
             else if(parts[0] == 'red') {
             message.member.addRole(RED);
@@ -91,7 +91,7 @@ bot.on('message', (message) => {
             else if(parts[0] == 'Pink') {
             message.member.addRole(PINK);
         }
-            else if(parts[0] == 'pinK') {
+            else if(parts[0] == 'pink') {
             message.member.addRole(PINK);
         }
             else if(parts[0] == 'YELLOW') {
