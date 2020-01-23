@@ -322,6 +322,117 @@ if(parts[0] == 'Yellow') {
            if(parts[0] == 'yellow') {
             message.member.removeRole(RED);
 }
+           if(parts[0] == '15') {
+            message.member.removeRole(ONE);
+}
+           if(parts[0] == '15') {
+            message.member.removeRole(THREE);
+}
+           if(parts[0] == '15') {
+            message.member.removeRole(FOUR);
+}
+           if(parts[0] == '16') {
+            message.member.removeRole(ONE);
+}
+           if(parts[0] == '16') {
+            message.member.removeRole(THREE);
+}
+           if(parts[0] == '16') {
+            message.member.removeRole(FOUR);
+}
+           if(parts[0] == '17') {
+            message.member.removeRole(ONE);
+}
+           if(parts[0] == '17') {
+            message.member.removeRole(THREE);
+}
+           if(parts[0] == '17') {
+            message.member.removeRole(FOUR);
+}
+           if(parts[0] == '19') {
+            message.member.removeRole(ONE);
+}
+           if(parts[0] == '19') {
+            message.member.removeRole(TWO);
+}
+           if(parts[0] == '19') {
+            message.member.removeRole(FOUR);
+}
+           if(parts[0] == '20') {
+            message.member.removeRole(ONE);
+}
+           if(parts[0] == '20') {
+            message.member.removeRole(TWO);
+}
+           if(parts[0] == '20') {
+            message.member.removeRole(FOUR);
+}
+           if(parts[0] == '18') {
+            message.member.removeRole(ONE);
+}
+           if(parts[0] == '18') {
+            message.member.removeRole(TWO);
+}
+           if(parts[0] == '18') {
+            message.member.removeRole(FOUR);
+}
+
+           if(parts[0] == '13') {
+            message.member.removeRole(THREE);
+}
+           if(parts[0] == '13') {
+            message.member.removeRole(TWO);
+}
+           if(parts[0] == '13') {
+            message.member.removeRole(FOUR);
+}
+           if(parts[0] == '14') {
+            message.member.removeRole(THREE);
+}
+           if(parts[0] == '14') {
+            message.member.removeRole(TWO);
+}
+           if(parts[0] == '14') {
+            message.member.removeRole(FOUR);
+}
+           if(parts[0] == '21') {
+            message.member.removeRole(THREE);
+}
+           if(parts[0] == '21') {
+            message.member.removeRole(TWO);
+}
+           if(parts[0] == '21') {
+            message.member.removeRole(ONE);
+}
+           if(parts[0] == '22') {
+            message.member.removeRole(THREE);
+
+}
+           if(parts[0] == '22') {
+            message.member.removeRole(TWO);
+}
+           if(parts[0] == '22') {
+            message.member.removeRole(ONE);
+}
+           if(parts[0] == '23') {
+            message.member.removeRole(THREE);
+}
+           if(parts[0] == '23') {
+            message.member.removeRole(TWO);
+}
+           if(parts[0] == '23') {
+            message.member.removeRole(ONE);
+}
+           if(parts[0] == 24') {
+            message.member.removeRole(THREE);
+}
+           if(parts[0] == '24') {
+            message.member.removeRole(TWO);
+}
+           if(parts[0] == '24') {
+            message.member.removeRole(ONE);
+}
+
 });         
 
 bot.registry.registerGroup("simple", "Simple")
