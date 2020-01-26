@@ -1022,7 +1022,9 @@ bot.on("message", message => {
             const messages = generateMessages();
             messages.forEach((obj, react) => {
                 if (!checkRole(message.guild,obj.role)) throw `The role '${obj.role}' does not exist!`;
-
+message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'offline').size}\` : You need Some milk and adding The req roles `); 
+ message.delete(); 
+};     
 		    
                 message.channel.send(obj.message).then(async m => {
                     const emoji = reactions[react];
@@ -1042,13 +1044,17 @@ bot.on("message", message => {
 
             if (embedColor) roleEmbed.setColor(embedColor);
             if (embedThumbnail) roleEmbed.setThumbnail(embedThumbnailLink);
-
+message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'offline').size}\` : Reserved `); 
+ message.delete(); 
+};     
             const fields = generateEmbedFields();
             if (fields.length >= 25) throw "That maximum roles that can be set for an embed is 25!";
 
             for (const f of fields) {
                 if (!checkRole(message.guild, f.role)) throw `The role '${role}' does not exist!`;
-
+message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'offline').size}\` : Reserved `); 
+ message.delete(); 
+};     
                 const emoji = f.emoji;
                 const customEmote = bot.emojis.find(e => e.name === emoji);
                 
