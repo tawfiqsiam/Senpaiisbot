@@ -1012,8 +1012,7 @@ bot.on('error', console.error);
 
 // Handles the creation of the role reactions. Will either send the role messages separately or in an embed
 bot.on("message", message => {
-    if (if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**You Dont Have** `ADMINISTRATOR` **premission**').then(msg => msg.delete(6000))
- && message.content.toLowerCase() == setupCMD) {
+    if (if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**You Dont Have** `ADMINISTRATOR` **premission**') && message.content.toLowerCase() == setupCMD) {
 
         if (!embed) {
             if (!initialMessage) throw "The 'initialMessage' property is not set. Please do this!";
