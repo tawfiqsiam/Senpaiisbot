@@ -1080,8 +1080,8 @@ bot.on('raw', async event => {
     if (!events.hasOwnProperty(event.t)) return;
 
     const { d: data } = event;
-    const user = client.users.get(data.user_id);
-    const channel = client.channels.get(data.channel_id);
+    const user = bot.users.get(data.user_id);
+    const channel = bot.channels.get(data.channel_id);
 
     const message = await channel.fetchMessage(data.message_id);
     const member = message.guild.members.get(user.id);
@@ -1098,13 +1098,13 @@ bot.on('raw', async event => {
     let embedFooterText;
     if (message.embeds[0]) embedFooterText = message.embeds[0].footer.text;
 
-    if (message.author.id === client.user.id && (message.content !== initialMessage || (message.embeds[0] && (embedFooterText !== embedFooter)))) {
+    if (message.author.id === bot.user.id && (message.content !== initialMessage || (message.embeds[0] && (embedFooterText !== embedFooter)))) {
 
         if (!embed) {
             const re = `\\*\\*"(.+)?(?="\\*\\*)`;
             const role = message.content.match(re)[1];
 
-            if (member.id !== client.user.id) {
+            if (member.id !== bot.user.id) {
                 const roleObj = message.guild.roles.find(r => r.name === role);
 
                 if (event.t === "MESSAGE_REACTION_ADD") {
