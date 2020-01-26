@@ -1049,7 +1049,7 @@ bot.on("message", message => {
                 if (!checkRole(message.guild, f.role)) throw `The role '${role}' does not exist!`;
 
                 const emoji = f.emoji;
-                const customEmote = client.emojis.find(e => e.name === emoji);
+                const customEmote = bot.emojis.find(e => e.name === emoji);
                 
                 if (!customEmote) roleEmbed.addField(emoji, f.role, true);
                 else roleEmbed.addField(customEmote, f.role, true);
@@ -1058,7 +1058,7 @@ bot.on("message", message => {
             message.channel.send(roleEmbed).then(async m => {
                 for (const r of reactions) {
                     const emoji = r;
-                    const customEmote = client.emojis.find(e => e.name === emoji);
+                    const customEmote = bot.emojis.find(e => e.name === emoji);
                     
                     if (!customEmote) await m.react(emoji);
                     else await m.react(customEmote.id);
