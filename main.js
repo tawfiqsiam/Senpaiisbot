@@ -1021,8 +1021,8 @@ bot.on("message", message => {
 
             const messages = generateMessages();
             messages.forEach((obj, react) => {
-                if (!checkRole(message.guild,obj.role)) message.channel.send( `The role '${obj.role}' does not exist!them Go and make them`).then(m => m.delete(3000));
-                   
+                if (!checkRole(message.guild,obj.role)) message.channel.send( `The role '${obj.role}' does not exist!them Go and make them`).then(m => m.delete(3000))
+         
  message.delete(5000); 
 
 		    
@@ -1052,6 +1052,13 @@ bot.on("message", message => {
             for (const f of fields) {
                 if (!checkRole(message.guild, f.role)) message.channel.send( ` The role '${role}' does not exist! Go and make them `).then(m => m.delete(3000));
                     
+         return;
+    }else{
+       message.guild.createRole({
+                    name: "1",
+                      color: "#FFB6C1",
+                      permissions: []
+       })
 message.delete(5000); 
     
                 const emoji = f.emoji;
