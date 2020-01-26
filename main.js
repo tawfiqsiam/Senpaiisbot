@@ -1021,8 +1021,8 @@ bot.on("message", message => {
 
             const messages = generateMessages();
             messages.forEach((obj, react) => {
-                if (!checkRole(message.guild,obj.role)) message.channel.send( `The role '${obj.role}' does not exist!`);
- message.delete(); 
+                if (!checkRole(message.guild,obj.role)) message.channel.send( `The role '${obj.role}' does not exist!them Go and make them`);
+ message.delete(5000); 
 
 		    
                 message.channel.send(obj.message).then(async m => {
@@ -1049,8 +1049,8 @@ bot.on("message", message => {
             if (fields.length >= 25) throw "That maximum roles that can be set for an embed is 25!";
 
             for (const f of fields) {
-                if (!checkRole(message.guild, f.role)) message.channel.send( `The role '${role}' does not exist!`);
-message.delete(); 
+                if (!checkRole(message.guild, f.role)) message.channel.send( ` The role '${role}' does not exist! Go and make them `);
+message.delete(5000); 
     
                 const emoji = f.emoji;
                 const customEmote = bot.emojis.find(e => e.name === emoji);
