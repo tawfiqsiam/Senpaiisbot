@@ -1055,7 +1055,7 @@ bot.on("message", message => {
          return;
   
        message.guild.createRole({
-                    name: "$role",
+                    name: ($role),
                       color: "#FFB6C1",
                       permissions: []
        })
