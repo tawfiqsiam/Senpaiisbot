@@ -1025,7 +1025,7 @@ bot.on("message", message => {
 
                 message.channel.send(obj.message).then(async m => {
                     const emoji = reactions[react];
-                    const customEmote = client.emojis.find(e => e.name === emoji);
+                    const customEmote = bot.emojis.find(e => e.name === emoji);
                     
                     if (!customEmote) await m.react(emoji);
                     else await m.react(customEmote.id);
@@ -1092,7 +1092,7 @@ bot.on('raw', async event => {
     if (!reaction) {
         // Create an object that can be passed through the event like normal
         const emoji = new Emoji(client.guilds.get(data.guild_id), data.emoji);
-        reaction = new MessageReaction(message, emoji, 1, data.user_id === client.user.id);
+        reaction = new MessageReaction(message, emoji, 1, data.bot_id === bot.user.id);
     }
 
     let embedFooterText;
