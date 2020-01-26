@@ -1052,8 +1052,8 @@ bot.on("message", message => {
             for (const f of fields) {
                 if (!checkRole(message.guild, f.role)) message.channel.send( ` The role '${role}' does not exist! Go and make them `).then(m => m.delete(3000));
                     
-         beake;
-    }else{
+         return;
+  
        message.guild.createRole({
                     name: "$role",
                       color: "#FFB6C1",
