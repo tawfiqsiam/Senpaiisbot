@@ -1021,7 +1021,7 @@ bot.on("message", message => {
 
             const messages = generateMessages();
             messages.forEach((obj, react) => {
-                if (!checkRole(message.guild, obj.role)) throw `The role '${role}' does not exist!`;
+                if (!checkRole(message.guild,obj.role)) throw `The role '${obj.role}' does not exist!`;
 
 		    
                 message.channel.send(obj.message).then(async m => {
