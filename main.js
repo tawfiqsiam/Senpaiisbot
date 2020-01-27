@@ -1020,9 +1020,7 @@ bot.on('error', console.error);
            if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**You Dont Have** `ADMINISTRATOR` **premission**').then(msg => msg.delete(6000))
   if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.reply("**I Don't Have `MANAGE_ROLES` Permission**").then(msg => msg.delete(6000))
 
-        if (!embed) {
-            if (!initialMessage) throw "The 'initialMessage' property is not set. Please do this!";
-
+        
             message.channel.send(initialMessage);
 
             const messages = generateMessages();
