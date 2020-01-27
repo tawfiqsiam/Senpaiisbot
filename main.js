@@ -1011,8 +1011,14 @@ bot.on("ready", () => console.log("Bot is online!"));
 bot.on('error', console.error);
 
 // Handles the creation of the role reactions. Will either send the role messages separately or in an embed
-bot.on("message", message => {
-    if(!message.member.hasPermission('ADMINISTRATOR') && message.content.toLowerCase() == setupCMD) {
+//////////
+ bot.on('message', message => {
+      var prefix= "g!";
+
+      if(message.content === prefix + 'test') {
+                           if(!message.channel.guild) return message.channel.send('**This Commnad only For Servers !**'); 
+           if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**You Dont Have** `ADMINISTRATOR` **premission**').then(msg => msg.delete(6000))
+  if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.reply("**I Don't Have `MANAGE_ROLES` Permission**").then(msg => msg.delete(6000))
 
         if (!embed) {
             if (!initialMessage) throw "The 'initialMessage' property is not set. Please do this!";
