@@ -1082,7 +1082,7 @@ message.delete(5000);
                 }
             });
         }
-    }
+    
 });
 
 // This makes the events used a bit more readable
