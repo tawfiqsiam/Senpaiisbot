@@ -964,7 +964,7 @@ If you would like to remove the role, simply remove your reaction!
 const embedFooter = "Role Reactions"; // Must set this if "embed" is set to true
 const roles = ["MALE", "Female", "NICE", "BAD"];
 const reactions = ["👦", "👧", "😇", "😈"]; // For custom emojis, provide the name of the emoji
-const embed = true; // Set to "true" if you want all roles to be in a single embed
+const embed = false; // Set to "true" if you want all roles to be in a single embed
 const embedColor = "#dd2423"; // Set the embed color if the "embed" variable is set to true
 const embedThumbnail = true; // Set to "true" if you want to set a thumbnail in the embed
 const embedThumbnailLink = "https://i.imgur.com/P8PD7DD.png"; // The link for the embed thumbnail
@@ -992,7 +992,7 @@ function generateMessages() {
 
 function generateMessages() {
     let messages = [];
-    for (const rrole of roles) messages.push({ role, message: `React below to get the **"${rrole}"** role!` }); //DONT CHANGE THIS
+    for (const rrole of roles) messages.push({ rrole, message: `React below to get the **"${rrole}"** role!` }); //DONT CHANGE THIS
     return messages;
 }
 // Function to generate the embed fields, based on your settings and if you set "const embed = true;"
@@ -1004,11 +1004,11 @@ function generateEmbedFields() {
         };
     });
 }
-Function to generate the embed fields, based on your settings and if you set "const embed = true;"
+///Function to generate the embed fields, based on your settings and if you set "const embed = true;"
 function generateEmbedFields() {
-    return roles.map((rr, ee) => {
+    return rroles.map((rr, ee) => {
         return {
-            emoji: reactions[ee],
+            emoji: ereactions[ee],
             rrole: rr
         };
     });
