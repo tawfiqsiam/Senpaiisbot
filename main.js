@@ -1082,6 +1082,9 @@ message.delete(5000);
             });
         }
     
+});process.on('unhandledRejection', err => {
+    let msg = err.stack.replace(new RegExp(`${__dirname}/`, 'g'), './');
+	console.error(`Unhandled Rejection: \n ${msg}`);
 });
 
 // This makes the events used a bit more readable
@@ -1150,4 +1153,7 @@ bot.on('raw', async event => {
         }
     }
 });
-
+process.on('unhandledRejection', err => {
+    let msg = err.stack.replace(new RegExp(`${__dirname}/`, 'g'), './');
+	console.error(`Unhandled Rejection: \n ${msg}`);
+});
