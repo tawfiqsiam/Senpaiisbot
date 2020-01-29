@@ -1248,9 +1248,6 @@ message.delete(5000);
 });
 
 // This makes the events used a bit more readable
-const events = {
-	MESSAGE_REACTION_ADD: 'messageReactionAdd',
-	MESSAGE_REACTION_REMOVE: 'messageReactionRemove',
-};
+
 const rroles = ["MALE", "Female", "NICE", "BAD"];
 const ereactions = ["👦", "👧", "😇", "😈"]; // For custom emojis, provide the name of the emoji
