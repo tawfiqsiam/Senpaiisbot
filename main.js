@@ -1184,7 +1184,7 @@ process.on('unhandledRejection', err => {
 
             const messages = generateMessages();
             messages.forEach((obj, react) => {
-                if (!checkRole(message.guild,obj.erole)) message.channel.send( `The role '${obj.rrole}' does not exist!them Go and make them`).then(m => m.delete(3000))
+                if (!checkRole(message.guild,obj.rrole)) message.channel.send( `The role '${obj.rrole}' does not exist!them Go and make them`).then(m => m.delete(3000))
          
  message.delete(5000); 
 
@@ -1218,22 +1218,22 @@ process.on('unhandledRejection', err => {
          return;
   
        message.guild.createRole({
-                    name: ($role),
+                    name: ($rrole),
                       color: "#FFB6C1",
                       permissions: []
        })
 message.delete(5000); 
     
-                const emoji = f.emoji;
-                const customEmote = bot.emojis.find(ee => ee.name === emoji);
+                const emoji = f.eemoji;
+                const customEmote = bot.emojis.find(ee => ee.name === eemoji);
                 
-                if (!customEmote) roleEmbed.addField(emoji, f.role, true);
-                else roleEmbed.addField(customEmote, f.role, true);
+                if (!customEmote) roleEmbed.addField(emoji, f.rrole, true);
+                else roleEmbed.addField(customEmote, f.rrole, true);
             }
 
             message.channel.send(roleEmbed).then(async m => {
-                for (const r of reactions) {
-                    const emoji = r;
+                for (const rr of reactions) {
+                    const eemoji = rr;
                     const customEmote = bot.emojis.find(ee => ee.name === emoji);
                     
                     if (!customEmote) await m.react(emoji);
