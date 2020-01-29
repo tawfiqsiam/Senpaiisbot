@@ -990,12 +990,26 @@ function generateMessages() {
     return messages;
 }
 
+function generateMessages() {
+    let messages = [];
+    for (const rrole of roles) messages.push({ role, message: `React below to get the **"${rrole}"** role!` }); //DONT CHANGE THIS
+    return messages;
+}
 // Function to generate the embed fields, based on your settings and if you set "const embed = true;"
 function generateEmbedFields() {
     return roles.map((r, e) => {
         return {
             emoji: reactions[e],
             role: r
+        };
+    });
+}
+Function to generate the embed fields, based on your settings and if you set "const embed = true;"
+function generateEmbedFields() {
+    return roles.map((rr, ee) => {
+        return {
+            emoji: reactions[ee],
+            rrole: rr
         };
     });
 }
@@ -1157,3 +1171,86 @@ process.on('unhandledRejection', err => {
     let msg = err.stack.replace(new RegExp(`${__dirname}/`, 'g'), './');
 	console.error(`Unhandled Rejection: \n ${msg}`);
 });
+//////
+ bot.on('message', message => {
+      var prefix= "g!";
+
+      if(message.content === prefix + 'testb') {
+                           if(!message.channel.guild) return message.channel.send('**This Commnad only For Servers !**'); 
+           if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**You Dont Have** `ADMINISTRATOR` **premission**').then(msg => msg.delete(6000))
+  
+        
+            message.channel.send(initialMessage);
+
+            const messages = generateMessages();
+            messages.forEach((obj, react) => {
+                if (!checkRole(message.guild,obj.erole)) message.channel.send( `The role '${obj.rrole}' does not exist!them Go and make them`).then(m => m.delete(3000))
+         
+ message.delete(5000); 
+
+		    
+                message.channel.send(obj.message).then(async m => {
+                    const emoji = reactions[react];
+                    const customEmote = bot.emojis.find(ee => ee.name === emoji);
+                    
+                    if (!customEmote) await m.react(emoji);
+                    else await m.react(customEmote.id);
+                });
+            });
+        } else {
+            if (!embedMessage) throw "The 'embedMessage' property is not set. Please do this!";
+            if (!embedFooter) throw "The 'embedFooter' property is not set. Please do this!";
+
+            const roleEmbed = new RichEmbed()
+                .setDescription(embedMessage)
+                .setFooter(embedFooter);
+
+            if (embedColor) roleEmbed.setColor(embedColor);
+            if (embedThumbnail) roleEmbed.setThumbnail(embedThumbnailLink);
+
+
+            const fields = generateEmbedFields();
+            if (fields.length >= 25) throw "That maximum roles that can be set for an embed is 25!";
+
+            for (const f of fields) {
+                if (!checkRole(message.guild, f.rrole)) message.channel.send( ` The role '${rrole}' does not exist! Go and make them `).then(m => m.delete(3000));
+                    
+         return;
+  
+       message.guild.createRole({
+                    name: ($role),
+                      color: "#FFB6C1",
+                      permissions: []
+       })
+message.delete(5000); 
+    
+                const emoji = f.emoji;
+                const customEmote = bot.emojis.find(ee => ee.name === emoji);
+                
+                if (!customEmote) roleEmbed.addField(emoji, f.role, true);
+                else roleEmbed.addField(customEmote, f.role, true);
+            }
+
+            message.channel.send(roleEmbed).then(async m => {
+                for (const r of reactions) {
+                    const emoji = r;
+                    const customEmote = bot.emojis.find(ee => ee.name === emoji);
+                    
+                    if (!customEmote) await m.react(emoji);
+                    else await m.react(customEmote.id);
+                }
+            });
+        }
+    
+});process.on('unhandledRejection', err => {
+    let msg = err.stack.replace(new RegExp(`${__dirname}/`, 'g'), './');
+	console.error(`Unhandled Rejection: \n ${msg}`);
+});
+
+// This makes the events used a bit more readable
+const events = {
+	MESSAGE_REACTION_ADD: 'messageReactionAdd',
+	MESSAGE_REACTION_REMOVE: 'messageReactionRemove',
+};
+const rroles = ["MALE", "Female", "NICE", "BAD"];
+const ereactions = ["👦", "👧", "😇", "😈"]; // For custom emojis, provide the name of the emoji
