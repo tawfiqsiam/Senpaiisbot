@@ -990,11 +990,7 @@ function generateMessages() {
     return messages;
 }
 
-function generateMessages() {
-    let messages = [];
-    for (const rrole of roles) messages.push({ rrole, message: `React below to get the **"${rrole}"** role!` }); //DONT CHANGE THIS
-    return messages;
-}
+
 // Function to generate the embed fields, based on your settings and if you set "const embed = true;"
 function generateEmbedFields() {
     return roles.map((r, e) => {
@@ -1003,16 +999,6 @@ function generateEmbedFields() {
             role: r
         };
     });
-}
-///Function to generate the embed fields, based on your settings and if you set "const embed = true;"
-function generateEmbedFields() {
-    return rroles.map((rr, ee) => {
-        return {
-            emoji: ereactions[ee],
-            rrole: rr
-        };
-    });
-}
 
 function checkRole(guild, role) {
     const checkRole = guild.roles.find(r => r.name === role);
