@@ -3,8 +3,8 @@ const yourID = "263639609416613888"; //Instructions on how to get this: https://
 const setupCMD = "!createrolemessage";
 const initialMessage = `**React to this to get access to the server || ضع اشرة صح للدخول الى السيرفر قبل الافتتاح**`;
 const embedMessage = `
-React to the emoji that matches the role you wish to receive.
-If you would like to remove the role, simply remove your reaction!
+React to the emoji to join the main chat on the server.
+حط رياكشن عشان تدخل السيرفر
 `;
 const embedFooter = "Role Reactions"; // Must set this if "embed" is set to true
 const roles = ["OP"];
