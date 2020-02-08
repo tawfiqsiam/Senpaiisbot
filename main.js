@@ -9,7 +9,7 @@ React to the emoji to join the main chat on the server.
 const embedFooter = "Role Reactions"; // Must set this if "embed" is set to true
 const roles = ["OP,English"];
 const reactions = ["✅,🔤"]; // For custom emojis, provide the name of the emoji
-const embed = true; // Set to "true" if you want all roles to be in a single embed
+const embed = false ; // Set to "true" if you want all roles to be in a single embed
 const embedColor = "#dd2423"; // Set the embed color if the "embed" variable is set to true
 const embedThumbnail = true; // Set to "true" if you want to set a thumbnail in the embed
 const embedThumbnailLink = "https://cdn.discordapp.com/icons/655436485515804682/a_1b2a07ec46a744c889c1471fec0151c2.gif?size=1024"; // The link for the embed thumbnail
@@ -29,7 +29,7 @@ if (roles.length !== reactions.length) throw "Roles list and reactions list are 
 // Function to generate the role messages, based on your settings
 function generateMessages() {
     let messages = [];
-    for (const role of roles) messages.push({ role, message: `react with ✅ حط ` }); //DONT CHANGE THIS
+    for (const role of roles) messages.push({ role, message: `react with ${reactions} حط ` }); //DONT CHANGE THIS
     return messages;
 }
 
