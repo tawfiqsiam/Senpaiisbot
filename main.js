@@ -7,7 +7,7 @@ React to the emoji to join the main chat on the server.
 حط رياكشن عشان تدخل السيرفر
 `;
 const embedFooter = "Role Reactions"; // Must set this if "embed" is set to true
-const roles = ["OP,English"];
+const roles = ["OP" , "English"];
 const reactions = ["✅" , "🔤"]; // For custom emojis, provide the name of the emoji
 const embed = true ; // Set to "true" if you want all roles to be in a single embed
 const embedColor = "#dd2423"; // Set the embed color if the "embed" variable is set to true
