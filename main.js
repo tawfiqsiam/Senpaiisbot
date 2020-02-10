@@ -1,7 +1,7 @@
 
 const yourID = "263639609416613888"; //Instructions on how to get this: https://redd.it/40zgse
 const setupCMD = "!createrolemessage";
-const initialMessage = `**ضع ✅ للحصول على الون  ${role}**`;
+const initialMessage = `**ضع ✅ للحصول على الون  @{roles}**`;
 const embedMessage = `
 اختر الرياكشن 
 ✏️ للدخول الى الرومات الكتابية
