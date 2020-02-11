@@ -7,8 +7,9 @@ const embedMessage = `
 ✏️ للدخول الى الرومات الكتابية
  💻 للحصول على رتبة تتيح لك دخول رومات الألعاب`;
 const embedFooter = "Role Reactions"; // Must set this if "embed" is set to true
-const roles = ["1" , "2", "3", "4", "5", "6", "7", "8", "9", "10"];
-const reactions = ["✏" , "💻","✏","✏","✏","✏","✏","✏","✏","✏"]; // For custom emojis, provide the name of the emoji
+const roles = ["NT" , "Gaming
+"];
+const reactions = ["✏" , "💻"]; // For custom emojis, provide the name of the emoji
 const embed = true ; // Set to "true" if you want all roles to be in a single embed
 const embedColor = "#dd2423"; // Set the embed color if the "embed" variable is set to true
 const embedThumbnail = true; // Set to "true" if you want to set a thumbnail in the embed
