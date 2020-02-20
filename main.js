@@ -1,20 +1,19 @@
-
-const yourID = "263639609416613888"; //Instructions on how to get this: https://redd.it/40zgse
-const setupCMD = "!createrolemessage";
-const initialMessage = `**ضع ✅ للحصول على الون  @{roles}**`;
+Configuration & Settings
+const yourID = "158063324699951104"; //Instructions on how to get this: https://redd.it/40zgse
+const setupCMD = "!69star";
+const initialMessage = `**بسيطة حط رياكشن تاخذ رتبة شيل الرياكشن تنشال الرتبة!**`;
 const embedMessage = `
-اختر الرياكشن 
-✏️ للدخول الى الرومات الكتابية
- 💻 للحصول على رتبة تتيح لك دخول رومات الألعاب`;
+React to the emoji that matches the role you wish to receive.
+If you would like to remove the role, simply remove your reaction!
+`;
 const embedFooter = "Role Reactions"; // Must set this if "embed" is set to true
-const roles = ["NT" , "Gaming
-"];
-const reactions = ["✏" , "💻"]; // For custom emojis, provide the name of the emoji
-const embed = true ; // Set to "true" if you want all roles to be in a single embed
+const roles = ["PIC", "GIMING", "REWARD"];
+const reactions = [":frame_photo:", "🖌", ":tada:"]; // For custom emojis, provide the name of the emoji
+const embed = false; // Set to "true" if you want all roles to be in a single embed
 const embedColor = "#dd2423"; // Set the embed color if the "embed" variable is set to true
 const embedThumbnail = true; // Set to "true" if you want to set a thumbnail in the embed
-const embedThumbnailLink = "https://cdn.discordapp.com/icons/443453434713341952/a_b550d719e326bddd89d87889d3bdf2a0.gif?size=1024"; // The link for the embed thumbnail
-
+const embedThumbnailLink = "https://i.imgur.com/P8PD7DD.png"; // The link for the embed thumbnail
+const botToken = "";
 /**
  * You'll have to set this up yourself! Read more below:
  * 
@@ -24,13 +23,15 @@ const embedThumbnailLink = "https://cdn.discordapp.com/icons/443453434713341952/
 // Import constructords and login the client
 const { Client, RichEmbed, Emoji, MessageReaction } = require('discord.js');
 const client = new Client({ disableEveryone: true });
+client.login(botToken);
+
 // If there isn't a reaction for every role, scold the user!
 if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
 
 // Function to generate the role messages, based on your settings
 function generateMessages() {
     let messages = [];
-    for (const role of roles) messages.push({ role, message: ` ${role} حط ✅عشان تاخذ رتبة ` }); //DONT CHANGE THIS
+    for (const role of roles) messages.push({ role, message: `حط رياكشن عشان تاخذ الرتبة **"${role}"** !` }); //DONT CHANGE THIS
     return messages;
 }
 
@@ -183,8 +184,3 @@ process.on('unhandledRejection', err => {
     let msg = err.stack.replace(new RegExp(`${__dirname}/`, 'g'), './');
 	console.error(`Unhandled Rejection: \n ${msg}`);
 });
-//Discord Server this Bot is on: https://discord.gg/CgGtZdm
-client.login(process.env.BOT_TOKEN);   //Bot by Senpaii -> Discord: Senpaii|先輩#1633
-
-
-///
