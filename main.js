@@ -14,7 +14,6 @@ const embedColor = "#dd2423"; // Set the embed color if the "embed" variable is 
 const embedThumbnail = true; // Set to "true" if you want to set a thumbnail in the embed
 const embedThumbnailLink = "https://i.imgur.com/P8PD7DD.png"; // The link for the embed thumbnail
 client.login(process.env.BOT_TOKEN);
-};
 /**
  * You'll have to set this up yourself! Read more below:
  * 
