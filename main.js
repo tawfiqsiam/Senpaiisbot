@@ -1,5 +1,5 @@
-Configuration & Settings
-const yourID = "158063324699951104"; //Instructions on how to get this: https://redd.it/40zgse
+
+const yourID = "263639609416613888"; //Instructions on how to get this: https://redd.it/40zgse
 const setupCMD = "!69star";
 const initialMessage = `**بسيطة حط رياكشن تاخذ رتبة شيل الرياكشن تنشال الرتبة!**`;
 const embedMessage = `
