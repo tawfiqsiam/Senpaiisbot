@@ -8,7 +8,7 @@ If you would like to remove the role, simply remove your reaction!
 `;
 const embedFooter = "Role Reactions"; // Must set this if "embed" is set to true
 const roles = ["PIC", "GIMING", "REWARD"];
-const reactions = [":frame_photo:", "🖌", ":tada:"]; // For custom emojis, provide the name of the emoji
+const reactions = ["<:oKK:658735496360624138>", "🖌", ":tada:"]; // For custom emojis, provide the name of the emoji
 const embed = false; // Set to "true" if you want all roles to be in a single embed
 const embedColor = "#dd2423"; // Set the embed color if the "embed" variable is set to true
 const embedThumbnail = true; // Set to "true" if you want to set a thumbnail in the embed
