@@ -13,7 +13,6 @@ const embed = false; // Set to "true" if you want all roles to be in a single em
 const embedColor = "#dd2423"; // Set the embed color if the "embed" variable is set to true
 const embedThumbnail = true; // Set to "true" if you want to set a thumbnail in the embed
 const embedThumbnailLink = "https://i.imgur.com/P8PD7DD.png"; // The link for the embed thumbnail
-client.login(process.env.BOT_TOKEN);
 /**
  * You'll have to set this up yourself! Read more below:
  * 
@@ -23,7 +22,7 @@ client.login(process.env.BOT_TOKEN);
 // Import constructords and login the client
 const { Client, RichEmbed, Emoji, MessageReaction } = require('discord.js');
 const client = new Client({ disableEveryone: true });
-client.login(botToken);
+client.login(BOT_TOKEN);
 
 // If there isn't a reaction for every role, scold the user!
 if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
