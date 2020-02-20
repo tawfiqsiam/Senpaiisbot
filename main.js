@@ -22,7 +22,7 @@ const embedThumbnailLink = "https://i.imgur.com/P8PD7DD.png"; // The link for th
 // Import constructords and login the client
 const { Client, RichEmbed, Emoji, MessageReaction } = require('discord.js');
 const client = new Client({ disableEveryone: true });
-client.login(BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
 
 // If there isn't a reaction for every role, scold the user!
 if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
