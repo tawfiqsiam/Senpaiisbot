@@ -13,7 +13,8 @@ const embed = false; // Set to "true" if you want all roles to be in a single em
 const embedColor = "#dd2423"; // Set the embed color if the "embed" variable is set to true
 const embedThumbnail = true; // Set to "true" if you want to set a thumbnail in the embed
 const embedThumbnailLink = "https://i.imgur.com/P8PD7DD.png"; // The link for the embed thumbnail
-const botToken = "";
+client.login(process.env.BOT_TOKEN);
+};
 /**
  * You'll have to set this up yourself! Read more below:
  * 
