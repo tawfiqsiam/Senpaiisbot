@@ -3,16 +3,15 @@ const yourID = "263639609416613888"; //Instructions on how to get this: https://
 const setupCMD = "!reaction";
 const initialMessage = `**React to get a role || remove reaction to remove a role**`;
 const embedMessage = `
-React to the emoji to join the main chat on the server.
-حط رياكشن عشان تدخل السيرفر
+ **React to get a role || remove reaction to remove a role**
 `;
 const embedFooter = "Role Reactions"; // Must set this if "embed" is set to true
 const roles = ["Gurl" , "Boi" , "Trans" , "drop pings" , "giveaway ping" , "dead chat ping" , "annoucement ping"];
 const reactions = ["😇" , "😈" , "👤" , "💰" , "🎉" , "😵" , "🔱"]; // For custom emojis, provide the name of the emoji
-const embed = false ; // Set to "true" if you want all roles to be in a single embed
+const embed = true ; // Set to "true" if you want all roles to be in a single embed
 const embedColor = "#dd2423"; // Set the embed color if the "embed" variable is set to true
 const embedThumbnail = true; // Set to "true" if you want to set a thumbnail in the embed
-const embedThumbnailLink = "https://cdn.discordapp.com/icons/655436485515804682/a_1b2a07ec46a744c889c1471fec0151c2.gif?size=1024"; // The link for the embed thumbnail
+const embedThumbnailLink = "https://cdn.discordapp.com/attachments/695401231853813860/697138097464410212/0b336621f4638eb0d360bcc3833309604825a764_hq.gif"; // The link for the embed thumbnail
 
 /**
  * You'll have to set this up yourself! Read more below:
