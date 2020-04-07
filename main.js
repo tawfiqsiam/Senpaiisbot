@@ -1,14 +1,14 @@
 
 const yourID = "263639609416613888"; //Instructions on how to get this: https://redd.it/40zgse
-const setupCMD = "!createrolemessage";
-const initialMessage = `**React to this to get access to the server || ضع اشرة صح للدخول الى السيرفر قبل الافتتاح**`;
+const setupCMD = "!reaction";
+const initialMessage = `**React to get a role || remove reaction to remove a role**`;
 const embedMessage = `
 React to the emoji to join the main chat on the server.
 حط رياكشن عشان تدخل السيرفر
 `;
 const embedFooter = "Role Reactions"; // Must set this if "embed" is set to true
-const roles = ["access to the server" , "i only speak English"];
-const reactions = ["✅" , "🔤"]; // For custom emojis, provide the name of the emoji
+const roles = ["Gurl" , "Boi", "Trans", "drop pings", "giveaway ping", "dead chat ping", "announcement ping"];
+const reactions = ["😇" , "😈" , "👤" , "💰" , "🎉" , "😵" , "🔱"]; // For custom emojis, provide the name of the emoji
 const embed = true ; // Set to "true" if you want all roles to be in a single embed
 const embedColor = "#dd2423"; // Set the embed color if the "embed" variable is set to true
 const embedThumbnail = true; // Set to "true" if you want to set a thumbnail in the embed
@@ -29,7 +29,7 @@ if (roles.length !== reactions.length) throw "Roles list and reactions list are 
 // Function to generate the role messages, based on your settings
 function generateMessages() {
     let messages = [];
-    for (const role of roles) messages.push({ role, message: `react with ${reactions} حط ` }); //DONT CHANGE THIS
+    for (const role of roles) messages.push({ role, message: `react with ${reactions} To get ${roles} ` }); //DONT CHANGE THIS
     return messages;
 }
 
