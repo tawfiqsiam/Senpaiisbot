@@ -29,7 +29,7 @@ if (roles.length !== reactions.length) throw "Roles list and reactions list are 
 // Function to generate the role messages, based on your settings
 function generateMessages() {
     let messages = [];
-    for (const role of roles) messages.push({ role, message: `react with ${reactions} To get '${role}' ` }); //DONT CHANGE THIS
+    for (const role of roles) messages.push({ role, message: `react with ${reactions} To get a role` }); //DONT CHANGE THIS
     return messages;
 }
 
